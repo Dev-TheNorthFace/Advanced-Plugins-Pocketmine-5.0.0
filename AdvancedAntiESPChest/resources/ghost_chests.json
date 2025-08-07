@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "generated": "2023-11-15T14:30:00Z",
+  "chests": {
+    "world1:125:64:-342": {
+      "position": {
+        "x": 125,
+        "y": 64,
+        "z": -342,
+        "world": "world1"
+      },
+      "created": 1700058600,
+      "detected_players": []
+    },
+    "world_nether:50:70:120": {
+      "position": {
+        "x": 50,
+        "y": 70,
+        "z": 120,
+        "world": "world_nether"
+      },
+      "created": 1700058600,
+      "detected_players": []
+    },
+    "world_the_end:0:80:200": {
+      "position": {
+        "x": 0,
+        "y": 80,
+        "z": 200,
+        "world": "world_the_end"
+      },
+      "created": 1700058600,
+      "detected_players": []
+    }
+  },
+  "statistics": {
+    "total_generated": 15,
+    "total_detections": 3,
+    "last_reset": 1700058600
+  }
+}

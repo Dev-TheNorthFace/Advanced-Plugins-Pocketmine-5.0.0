@@ -1,0 +1,82 @@
+# Configuration du système AdvancedAntiAFK
+
+# Temps avant qu'un joueur soit considéré comme AFK (en secondes)
+afk_after_seconds: 180
+
+# Détecter les faux mouvements (ex: rester sur un seul bloc)
+detect_fake_movement: true
+
+# Détecter les enchaînements de sneak/unsuspect suspects
+detect_macro_sneak: true
+
+# Liste des joueurs exemptés du système AFK
+exempt_players:
+  - "admin"
+  - "mod"
+  - "helper"
+
+# Temps avant kick automatique (en secondes, 0 pour désactiver)
+kick_after_seconds: 600
+
+# Avertir le serveur quand un joueur devient AFK
+notify_afk_in_chat: true
+
+# Bloquer les gains (XP, argent) quand AFK
+block_rewards_while_afk: true
+
+# Téléporter automatiquement au spawn quand AFK
+move_to_spawn_on_afk: false
+
+# Configuration des actions automatiques
+auto_actions:
+  # Afficher [AFK] dans le TAB après X minutes
+  show_in_tab_after: 3
+
+  # Bloquer les gains après X minutes
+  block_rewards_after: 6
+
+  # Kick après X minutes
+  auto_kick_after: 10
+
+  # Kick immédiat si dans le void
+  kick_in_void: true
+
+# Zones spéciales de farm (où la détection est plus stricte)
+farm_zones:
+  - world: "farm"
+    pos1: {x: 100, y: 64, z: 100}
+    pos2: {x: 200, y: 80, z: 200}
+  - world: "minage"
+    pos1: {x: -300, y: 0, z: -300}
+    pos2: {x: 300, y: 100, z: 300}
+
+# Configuration des webhooks Discord
+discord:
+  enabled: true
+  webhook_url: "https://discord.com/api/webhooks/..."
+  afk_message: "**{player}** est AFK depuis {time}"
+  return_message: "**{player}** n'est plus AFK"
+  afk_threshold: 300 # Seuil en secondes avant d'envoyer la notification
+
+# Messages personnalisés
+messages:
+  afk_warning: "§eVous serez considéré AFK dans {time} secondes"
+  now_afk: "§eVous êtes maintenant AFK"
+  afk_kick: "§cVous avez été kick pour inactivité trop longue"
+  fake_movement: "§cAttention: Mouvements suspects détectés!"
+  rewards_blocked: "§cGains bloqués: Vous êtes AFK"
+
+# Configuration avancée
+advanced:
+  # Intervalle de vérification des joueurs (en secondes)
+  check_interval: 30
+
+  # Historique des positions à analyser
+  movement_history_size: 10
+
+  # Seuil de similarité pour les mouvements répétitifs (en %)
+  repetitive_threshold: 80
+
+  # Détecter les farms automatiques (blocs cassés/placés)
+  detect_auto_farms: true
+  farm_detection_time: 300 # 5 minutes

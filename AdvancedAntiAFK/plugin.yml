@@ -1,0 +1,36 @@
+name: AdvancedAntiAFK
+version: 1.0.0
+main: North\AntiAFK\Main
+api: 5.0.0
+description: "Système avancé de détection des joueurs AFK avec analyse comportementale"
+author: North
+load: POSTWORLD
+commands:
+  afk:
+    description: "Active/désactive le statut AFK"
+    usage: "/afk [on|off]"
+    permission: antiafk.command.afk
+  afklist:
+    description: "Liste les joueurs AFK"
+    usage: "/afklist"
+    permission: antiafk.command.afklist
+  afkstats:
+    description: "Affiche les statistiques AFK d'un joueur"
+    usage: "/afkstats [joueur]"
+    permission: antiafk.command.afkstats
+permissions:
+  antiafk.command.afk:
+    description: "Permet d'utiliser la commande /afk"
+    default: true
+  antiafk.command.afklist:
+    description: "Permet d'utiliser la commande /afklist"
+    default: op
+  antiafk.command.afkstats:
+    description: "Permet d'utiliser la commande /afkstats"
+    default: op
+  antiafk.bypass:
+    description: "Contourne toutes les vérifications AFK"
+    default: op
+  antiafk.notify:
+    description: "Reçoit les notifications AFK"
+    default: op

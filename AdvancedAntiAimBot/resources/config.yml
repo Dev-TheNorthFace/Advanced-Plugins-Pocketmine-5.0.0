@@ -1,0 +1,41 @@
+# Configuration AdvancedAntiAimbot - PocketMine 5.0.0
+# Détection des tricheurs avec précision anormale
+
+antiaimbot:
+  # Activation globale du système
+  enabled: true
+
+  # Paramètres de précision
+  angle_checks:
+    yaw_threshold: 4.0       # Écart maximum normal en degrés (horizontal)
+    pitch_threshold: 3.5      # Écart maximum normal en degrés (vertical)
+    lock_ticks_threshold: 5   # Nombre de ticks avant flag pour lock
+
+  # Détection des headshots
+  headshot:
+    check_enabled: true
+    ratio_threshold: 0.82     # 82% de headshots = suspect
+    minimum_hits: 15          # Nombre de hits avant analyse
+
+  # Détection avancée
+  advanced:
+    through_walls: true       # Détecter les hits à travers les murs
+    perfect_rotation: true    # Détecter les rotations trop fluides
+    instant_snap: true        # Détecter les snaps instantanés (>40° en 1 tick)
+
+  # Actions
+  punishments:
+    freeze_player: true       # Immobiliser le joueur détecté
+    alert_staff: true         # Alerter les staffs en jeu
+    broadcast: false         # Annoncer publiquement
+    webhook_url: ""          # URL Discord Webhook
+
+  # Exemptions
+  exemptions:
+    staff_bypass: true        # Les staffs ignorent les checks
+    permission: "antiaimbot.bypass"
+
+  # Paramètres de debug
+  debug:
+    log_detections: true
+    show_angles: false        # Afficher les angles en console

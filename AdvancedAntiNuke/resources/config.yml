@@ -1,0 +1,16 @@
+# AdvancedAntiNuke Configuration
+
+antiNuke:
+  enabled: true
+  max_blocks_per_sec: 15
+  max_area_per_tick: 4
+  auto_flag_above: 20
+  auto_ban_above: 30
+  auto_freeze: true
+  freeze_duration: 10
+  ban_on_repeat: true
+  notify_mods: true
+
+permissions:
+  alerts: "antinuke.alerts"
+  admin: "antinuke.admin"

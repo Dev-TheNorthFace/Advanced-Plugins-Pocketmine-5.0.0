@@ -1,0 +1,36 @@
+name: AdvancedAntiBadPacket
+version: 1.0.0
+main: North\AntiBadPacket\Main
+api: 5.0.0
+description: "Advanced protection against malicious packets and network attacks"
+author: North
+prefix: AntiBadPacket
+
+commands:
+  antibadpacket:
+    description: "Manage the AntiBadPacket system"
+    aliases: [abp]
+    usage: "/antibadpacket <reload|stats|check|monitor> [player]"
+    permission: antibadpacket.command
+
+  packetmonitor:
+    description: "Monitor player's packets in real-time"
+    usage: "/packetmonitor <player> [start|stop]"
+    permission: antibadpacket.monitor
+
+permissions:
+  antibadpacket.bypass:
+    description: "Bypass all AntiBadPacket checks"
+    default: op
+
+  antibadpacket.command:
+    description: "Access to AntiBadPacket commands"
+    default: op
+
+  antibadpacket.monitor:
+    description: "Monitor player packets"
+    default: op
+
+  antibadpacket.notify:
+    description: "Receive violation notifications"
+    default: op

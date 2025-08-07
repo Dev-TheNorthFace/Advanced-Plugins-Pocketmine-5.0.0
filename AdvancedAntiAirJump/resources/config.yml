@@ -1,0 +1,22 @@
+# Paramètres de détection
+max_air_ticks: 12
+max_y_increase_without_support: 1.5
+min_gravity_speed: -0.08
+
+# Comportement
+allow_jump_boost: true
+freeze_on_flag: true
+exempt_when_flying: true
+
+# Seuils d'action
+warn_threshold: 3
+kick_threshold: 5
+ban_threshold: 10
+
+# Messages
+messages:
+  warn: "§cAttention! Comportement anormal détecté."
+  freeze: "§cVous avez été gelé pour suspicion de triche."
+  kick: "§cVous avez été expulsé pour triche (AirJump)"
+  ban: "§cVous avez été banni pour triche (AirJump)"
+  staff_alert: "§4[AC] §c{player} §7flag pour §f{reason}"

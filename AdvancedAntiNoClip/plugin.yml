@@ -1,0 +1,22 @@
+name: AdvancedAntiNoClip
+version: 1.0.0
+main: North\AntiNoClip\Main
+api: 5.0.0
+author: North
+description: Système avancé de détection et prévention des tricheurs NoClip
+commands:
+  noclipstats:
+    description: Affiche les statistiques NoClip d'un joueur
+    usage: "/noclipstats [joueur]"
+    permission: antinoclip.stats
+    aliases: [ncs]
+permissions:
+  antinoclip.stats:
+    description: Permet d'utiliser la commande /noclipstats
+    default: op
+  antinoclip.bypass:
+    description: Permet de bypasser les détections NoClip
+    default: false
+  antinoclip.alerts:
+    description: Reçoit les alertes de détection NoClip
+    default: op

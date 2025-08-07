@@ -1,0 +1,19 @@
+# Paramètres IP
+enable_ip_check: true
+max_accounts_per_ip: 2
+block_on_ip_exceed: true
+
+# Détection appareil
+enable_device_id_check: true
+block_on_device_match: true
+
+# Restrictions nouveaux comptes
+block_new_accounts_under_x_minutes: 30
+min_playtime_required: 600
+
+# Notifications
+notify_staff_on_alt_detected: true
+webhook_url: ""
+
+# Exceptions
+exempt_ranks: ["admin", "staff"]

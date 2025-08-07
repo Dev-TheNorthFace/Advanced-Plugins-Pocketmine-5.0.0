@@ -1,0 +1,53 @@
+# Configuration du système AdvancedAntiNoClip
+antinoclip:
+  # Détection de base
+  check_inside_block: true
+  max_ticks_inside_block: 4
+  boundingbox_check: true
+  path_tracker_check: true
+
+  # Paramètres des Ghost Blocks
+  ghostblock_check: true
+  ghostblock_cooldown: 300  # secondes entre chaque test
+  ghostblock_material: GLASS
+
+  # Exceptions de blocs
+  allow_slab_halfblock: true
+  allow_stairs: true
+  allow_trapdoors: true
+  exempt_blocks:
+    - "minecraft:water"
+    - "minecraft:lava"
+    - "minecraft:cobweb"
+    - "minecraft:ladder"
+
+  # Actions automatiques
+  teleport_on_detection: true
+  freeze_on_flag: true
+  freeze_duration: 3  # secondes
+  ban_after_flags: 5
+  ban_duration: "7d"  # 7 jours (peut être "permanent")
+
+  # Alertes et logs
+  alert_threshold: 3
+  broadcast_alerts: true
+  log_to_file: true
+  replay_length: 100  # nombre de positions à enregistrer
+
+  # Exemptions
+  exempt_op: true
+  exempt_creative: false
+  exempt_permission: "antinoclip.bypass"
+
+  # Intégration Discord
+  discord:
+    webhook_url: ""
+    embed_color: 16711680  # rouge
+    send_screenshots: false
+
+# Paramètres avancés (ne pas modifier sans connaissance)
+advanced:
+  collision_precision: 0.2  # précision des vérifications (0.1 à 1.0)
+  max_speed_threshold: 1.5  # blocs/tick
+  packet_analysis: true
+  debug_mode: false

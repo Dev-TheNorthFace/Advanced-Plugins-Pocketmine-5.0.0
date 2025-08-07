@@ -1,0 +1,18 @@
+name: AdvancedAntiJesus
+version: 1.0.0
+main: North\AntiJesus\Main
+api: 5.0.0
+author: North
+description: "Détecte et prévient le cheat Jesus (marche sur l'eau/lave)"
+commands:
+  jesusstats:
+    description: "Affiche les stats Anti-Jesus d'un joueur"
+    usage: "/jesusstats [joueur]"
+    permission: antijesus.command.stats
+permissions:
+  antijesus.bypass:
+    description: "Ignore les vérifications Anti-Jesus"
+    default: op
+  antijesus.command.stats:
+    description: "Permission pour la commande /jesusstats"
+    default: op

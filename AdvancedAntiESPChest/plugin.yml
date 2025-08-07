@@ -1,0 +1,40 @@
+name: AdvancedAntiESPChest
+version: 1.0.0
+main: North\AntiESPChest\Main
+api: 5.0.0
+author: North
+description: "Système avancé de détection des cheats ESP pour coffres et conteneurs"
+prefix: "AntiESP"
+
+commands:
+  espstats:
+    description: "Affiche les statistiques de détection ESP"
+    usage: "/espstats [joueur]"
+    aliases: ["estats"]
+  cheattest:
+    description: "Teste le système de détection"
+    usage: "/cheattest <ghost|trajectory|vision|all> [joueur]"
+    aliases: ["ctest"]
+    permission: antiespchest.command.test
+
+permissions:
+  antiespchest.admin:
+    description: "Accès à toutes les fonctionnalités admin"
+    default: op
+    children:
+      antiespchest.command.stats: true
+      antiespchest.command.test: true
+      antiespchest.alerts: true
+      antiespchest.bypass: true
+  antiespchest.command.stats:
+    description: "Permission pour utiliser /espstats"
+    default: true
+  antiespchest.command.test:
+    description: "Permission pour utiliser /cheattest"
+    default: op
+  antiespchest.alerts:
+    description: "Reçoit les alertes de détection"
+    default: op
+  antiespchest.bypass:
+    description: "Contourne les détections"
+    default: false

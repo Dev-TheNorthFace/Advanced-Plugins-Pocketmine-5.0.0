@@ -1,0 +1,12 @@
+antijesus:
+  y_variation_required: 0.02   # Variation minimale en Y attendue
+  max_ticks_on_liquid: 10      # Ticks avant flag si Y stable
+  freeze_on_detected: true      # Gèle le joueur si détection
+  exempt_with_effects: true     # Ignore si le joueur a Feather Falling/etc.
+  check_speed_on_liquid: true   # Vérifie la vitesse anormale
+  allow_boats: true             # Ne flag pas dans un bateau
+  actions:
+    warn_message: "§c[Anti-Cheat] Mouvement suspect (Jesus)"
+    freeze_duration: 5          # Secondes de freeze
+    log_to_console: true        # Envoie les alerts dans la console
+    broadcast_to_staff: true    # Alert les staffs en jeu

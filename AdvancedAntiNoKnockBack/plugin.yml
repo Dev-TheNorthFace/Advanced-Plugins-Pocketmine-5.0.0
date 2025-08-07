@@ -1,0 +1,33 @@
+name: AdvancedAntiNoKnockBack
+version: 1.0.0
+main: North\AntiNoKnockBack\Main
+api: 5.0.0
+author: North
+
+commands:
+  antikb:
+    description: Gère le système AntiNoKnockBack
+    usage: |
+      /antikb stats [joueur] - Affiche les statistiques KB
+      /antikb test [joueur] - Envoie un projectile de test
+      /antikb reload - Recharge la configuration
+      /antikb freeze [joueur] [durée] - Freeze un joueur
+      /antikb reset [joueur] - Réinitialise les stats
+    aliases: [akb]
+
+permissions:
+  antikb.command:
+    description: Accès aux commandes principales
+    default: op
+  antikb.stats:
+    description: Voir les statistiques AntiKB
+    default: op
+  antikb.test:
+    description: Effectuer des tests KB
+    default: op
+  antikb.manage:
+    description: Gérer le système AntiKB
+    default: op
+  antikb.bypass:
+    description: Contourner les détections
+    default: false

@@ -1,0 +1,82 @@
+# Configuration du système de détection
+detection:
+  # Analyse des trajectoires des joueurs
+  trajectory_analysis: true
+  # Nombre minimum de mouvements pour analyse
+  min_movements: 10
+  # Seuil de directivité (0.0 à 1.0)
+  directness_threshold: 0.85
+
+  # Vérification de la ligne de vue
+  line_of_sight: true
+  # Distance maximale de détection (en blocs)
+  max_distance: 8.0
+  # Précision du raycast (en blocs)
+  raycast_step: 0.3
+
+  # Pièges avec coffres fantômes
+  ghost_chests:
+    enabled: true
+    # Nombre de coffres par monde
+    count_per_world: 7
+    # Durée de vie en minutes
+    lifetime: 25
+    # Rayon de génération autour du spawn
+    spawn_radius: 1200
+
+# Paramètres des actions
+actions:
+  # Avertir le joueur suspect
+  warn_player: true
+  # Nombre d'avertissements avant action
+  warn_threshold: 2
+
+  # Geler le joueur
+  freeze_player: true
+  # Seuil de flags pour gel
+  freeze_threshold: 3
+
+  # Expulser le joueur
+  kick_player: true
+  # Seuil de flags pour kick
+  kick_threshold: 4
+
+  # Bannir le joueur
+  ban_player: true
+  # Seuil de flags pour ban
+  ban_threshold: 5
+
+# Messages personnalisables
+messages:
+  # Avertissements
+  warning:
+    - "&cAttention! Comportement suspect détecté."
+    - "&eSystème Anti-Triche: Vos actions sont analysées."
+
+  # Gel
+  freeze: "&4Vous avez été gelé pour suspicion de triche."
+
+  # Kick
+  kick: "&4Vous avez été expulsé pour utilisation possible de cheat."
+
+  # Ban
+  ban: "&4Bannissement pour triche (ESP/X-Ray)"
+
+  # Alertes staff
+  staff_alert: "&8[&cAntiESP&8] &7Joueur &c{player} &7détecté pour &f{reason}"
+
+# Paramètres avancés
+advanced:
+  # Intervalle de vérification (en ticks)
+  check_interval: 20
+  # Historique des mouvements à conserver
+  max_movement_history: 40
+  # Délai minimum pour trouver un coffre (secondes)
+  min_discovery_time: 2.5
+
+# Options de débogage
+debug:
+  # Enregistrer les détections dans console
+  log_detections: true
+  # Afficher les coffres fantômes (visibles seulement en debug)
+  show_ghost_chests: false

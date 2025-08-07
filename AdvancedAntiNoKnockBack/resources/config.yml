@@ -1,0 +1,64 @@
+# Configuration du système AdvancedAntiNoKnockBack
+antikb:
+  # Paramètres de détection
+  detection:
+    max_no_kb_hits: 3               # Nombre de hits sans KB avant alerte
+    min_expected_kb: 0.25           # Distance minimale attendue (en blocs)
+    tolerance_ms: 300               # Tolérance ping maximum (en ms)
+    check_delay_ticks: 10           # Délai de vérification après hit (en ticks)
+    max_normal_speed: 2.5           # Vitesse max normale (blocs/sec)
+
+  # Paramètres des tests
+  testing:
+    simulate_knockback: true        # Activer les projectiles de test
+    test_projectile_cooldown: 5     # Cooldown entre tests (secondes)
+    test_types:                     # Types de projectiles à utiliser
+      - snowball
+      - egg
+      - arrow
+    test_knockback_force: 0.4       # Force du KB de test
+
+  # Actions automatiques
+  auto_actions:
+    auto_freeze_on_confirmed: true   # Freeze auto si triche confirmée
+    freeze_duration: 30             # Durée du freeze (secondes)
+    punishment_steps:               # Échelons de punition
+      warning: 3                    # Avertissement après X flags
+      freeze: 5                     # Freeze après X flags
+      kick: 8                       # Kick après X flags
+      ban: 12                       # Ban après X flags
+    ban_duration: "7d"              # Durée du ban (1d, 1w, permanent)
+
+  # Exemptions
+  exemptions:
+    exempt_when_stuck: true         # Ignorer si bloqué contre un mur
+    exempt_when_ping_above: 250     # Ignorer si ping élevé
+    exempt_blocks:                  # Blocs annulant le KB
+      - "minecraft:slime_block"
+      - "minecraft:honey_block"
+      - "minecraft:cobweb"
+    exempt_effects:                 # Effets annulant le KB
+      - "resistance"
+      - "levitation"
+      - "fire_resistance"
+
+  # Paramètres avancés
+  advanced:
+    history_size: 20                # Nombre d'événements à conserver
+    debug_mode: false               # Logs détaillés
+    notify_staff: true              # Alerter les staff en cas de détection
+    notify_message: "&c[AntiKB] &7Joueur suspect: {player} (&6{niveau}%&7)"
+
+# Paramètres des messages
+messages:
+  warning: "&c[Anti-Cheat] &7Mouvement anormal détecté!"
+  freeze: "&cVous êtes freeze pour suspicion de triche!"
+  unfreeze: "&aVous avez été unfreeze. Jouez proprement!"
+  kick: "&cKick pour suspicion de NoKnockBack"
+  ban: "&cBan pour utilisation de NoKnockBack"
+
+# Paramètres de logging
+logging:
+  log_to_file: true
+  log_to_console: true
+  log_format: "[{date}] {player} - {action} (Niveau: {level})"

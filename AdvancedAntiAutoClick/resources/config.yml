@@ -1,0 +1,79 @@
+# Configuration principale du AdvancedAntiAutoClick
+settings:
+  # Paramètres généraux
+  debug-mode: false
+  language: "fr"  # fr/en/es
+  max-players-tracked: 100
+  data-retention-seconds: 3600
+
+# Détection des CPS
+cps-detection:
+  max-allowed: 15  # CPS maximum autorisé
+  check-interval: 1  # En secondes
+  punishment:
+    - "alert"  # alert/freeze/kick/ban
+    - "freeze"
+    - "kick:3"  # 3 = après 3 violations
+  exemptions:
+    creative-mode: false
+    bypass-permission: "anticheat.bypass"
+
+# Analyse des patterns
+pattern-analysis:
+  check-interval: 5  # En secondes
+  min-clicks-for-analysis: 20
+  perfect-timing-threshold: 5  # En ms
+  low-variation-threshold: 2.0
+  human-variation-range: [8.0, 25.0]
+
+# Paramètres avancés
+advanced:
+  human-score:
+    min-human-score: 20  # Score minimum pour kick
+    max-cps-penalty: 30
+    perfect-timing-penalty: 40
+  click-delay:
+    history-size: 50  # Nombre de clics à analyser
+    max-constant-sequence: 10
+
+# Système de punitions
+punishments:
+  freeze-duration: 300  # 5 minutes en secondes
+  ban-duration: 86400  # 1 jour en secondes
+  violations-before-ban: 3
+  violation-expiry: 86400  # 24 heures en secondes
+
+# Notifications
+notifications:
+  in-game:
+    enabled: true
+    permission: "anticheat.notify"
+    format: "§8[§cAntiAC§8] §c{player} §7- §f{reason} §7(CPS: §f{cps}§7)"
+  console:
+    enabled: true
+    format: "[AntiAC] {player} - {reason} (CPS: {cps})"
+  discord:
+    enabled: false
+    webhook-url: ""
+    embed-color: 16711680  # Rouge
+    message-format: "**Joueur:** {player}\n**Raison:** {reason}\n**CPS:** {cps}"
+
+# Messages personnalisables
+messages:
+  freeze:
+    title: "§c§lFREEZE"
+    subtitle: "§7Vous êtes suspecté d'auto-click"
+    chat: "§cVous avez été freeze par l'anti-cheat!"
+  kick:
+    reason: "§cAuto-click détecté (CPS: {cps})"
+  ban:
+    reason: "§cBanissement pour auto-click répété"
+  warnings:
+    - "§6Avertissement: §eVotre CPS est anormalement élevé"
+    - "§6Avertissement: §eVotre pattern de clic est suspect"
+
+# Paramètres expérimentaux (à utiliser avec précaution)
+experimental:
+  movement-analysis: false
+  damage-modifier: false
+  auto-mitigation: false

@@ -1,0 +1,36 @@
+name: AdvancedAntiNuke
+version: 1.0.0
+main: North\AntiNuke\Main
+api: 5.0.0
+author: North
+description: "Système avancé de détection de minage anormal"
+prefix: ANTI-NUKE
+
+commands:
+  nukestats:
+    description: "Affiche les statistiques de minage"
+    usage: "/nukestats [joueur]"
+    aliases: ["ns"]
+    permission: antinuke.stats
+  antinuke:
+    description: "Commandes d'administration AntiNuke"
+    usage: "/antinuke info|reload"
+    permission: antinuke.admin
+
+permissions:
+  antinuke.stats:
+    description: "Permet d'utiliser /nukestats"
+    default: true
+  antinuke.alerts:
+    description: "Reçoit les alertes de minage suspect"
+    default: op
+  antinuke.admin:
+    description: "Accès aux commandes admin"
+    default: op
+    children:
+      - antinuke.alerts
+      - antinuke.stats
+
+load: POSTWORLD
+library:
+  - libs/SomeLibrary.php

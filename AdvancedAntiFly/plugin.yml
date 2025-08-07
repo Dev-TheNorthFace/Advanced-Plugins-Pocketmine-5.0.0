@@ -1,0 +1,5 @@
+name: AdvancedAntiFly
+version: 1.0.0
+main: North\AntiFly\Main
+api: 5.0.0
+author: North

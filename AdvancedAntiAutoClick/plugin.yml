@@ -1,0 +1,51 @@
+name: AdvancedAntiAutoClick
+version: 1.0.0
+main: North\AntiAutoClick\Main
+api: 5.0.0
+author: North
+description: "Système avancé de détection d'auto-clic pour PocketMine 5.0.0"
+prefix: AntiAC
+
+commands:
+  autoclick:
+    description: "Gère le système anti-auto-click"
+    usage: "/autoclick <stats|flag|reset|watchlist|freeze> [joueur] [raison]"
+    permission: "anticheat.command"
+  flagclick:
+    description: "Signaler un joueur pour auto-click"
+    usage: "/flagclick <joueur> [raison]"
+    aliases: ["flagac"]
+    permission: "anticheat.flag"
+
+permissions:
+  anticheat.command:
+    description: "Permission pour les commandes /autoclick"
+    default: op
+  anticheat.flag:
+    description: "Permission pour signaler des joueurs"
+    default: op
+  anticheat.notify:
+    description: "Recevoir les alertes de détection"
+    default: op
+  anticheat.stats:
+    description: "Voir les statistiques avancées"
+    default: op
+  anticheat.bypass:
+    description: "Contourner les détections"
+    default: false
+  anticheat.freeze:
+    description: "Geler les joueurs suspects"
+    default: op
+
+depend: []
+softdepend: ["DiscordWebhookAPI"]  # Optionnel pour les webhooks Discord
+
+# Configuration des messages par défaut
+messages:
+  violations:
+    high_cps: "CPS trop élevé"
+    perfect_timing: "Timing de clic parfait"
+    low_human_score: "Score d'humanité faible"
+  alerts:
+    freeze: "§cVous avez été freeze pour suspicion d'auto-click!"
+    warning: "§6Avertissement: §eVotre comportement de clic est suspect"

@@ -1,0 +1,22 @@
+name: AdvancedAntiAimBot
+version: 1.0.0
+main: North\AntiAimBot\Main
+api: 5.0.0
+description: "Système avancé de détection des aimbots pour PocketMine-MP"
+author: North
+load: POSTWORLD
+commands:
+  aimbot:
+    description: "Commandes de gestion de l'AntiAimbot"
+    usage: "/aimbot <check|stats|reload> [joueur]"
+    permission: antiaimbot.command
+permissions:
+  antiaimbot.command:
+    description: "Accès aux commandes de l'AntiAimbot"
+    default: op
+  antiaimbot.bypass:
+    description: "Contourne les détections d'aimbot"
+    default: false
+  antiaimbot.notify:
+    description: "Reçoit les alertes de détection"
+    default: op

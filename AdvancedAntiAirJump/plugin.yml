@@ -1,0 +1,21 @@
+name: AdvancedAntiAirJump
+version: 1.0.0
+main: North\AntiAirJump\Main
+api: 5.0.0
+author: North
+description: "Détecte et prévient les triches de saut aérien"
+commands:
+  airstats:
+    description: "Affiche les statistiques AntiAirJump"
+    usage: "/airstats [joueur]"
+    permission: antiairjump.command.stats
+permissions:
+  antiairjump.alerts:
+    description: "Reçoit les alertes de triche"
+    default: op
+  antiairjump.command.stats:
+    description: "Permet d'utiliser la commande /airstats"
+    default: op
+  antiairjump.bypass:
+    description: "Contourne les détections"
+    default: false

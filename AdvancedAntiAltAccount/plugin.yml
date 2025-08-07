@@ -1,0 +1,14 @@
+name: AdvancedAntiAltAccount
+version: 1.0.0
+main: North\AntiAltAccount\Main
+api: 5.0.0
+author: North
+description: Système avancé de détection de comptes alternatifs
+commands:
+  alts:
+    description: Vérifie les comptes liés à un joueur
+    usage: "/alts <joueur>"
+permissions:
+  altdetector.notify:
+    description: Permission pour recevoir les alertes d'alts
+    default: op

@@ -1,0 +1,92 @@
+# ⚙️ Configuration de AdvancedAntiBadPacket
+config-version: 2.0
+
+# 🔒 Paramètres principaux
+enable: true
+debug-mode: false
+protection-level: 2 # 1=Normal | 2=Strict | 3=Paranoïa
+auto-update: true
+
+# 📊 Limites de paquets
+packet-limits:
+  MovePlayerPacket:
+    max-per-second: 35
+    check-position: true
+    check-rotation: true
+
+  InteractPacket:
+    max-per-second: 12
+    validate-entities: true
+
+  InventoryTransactionPacket:
+    max-per-second: 20
+    max-actions: 50
+
+  TextPacket:
+    max-per-second: 8
+    max-length: 256
+
+  SetTitlePacket:
+    max-per-second: 3
+    max-length: 64
+
+# 🛡️ Protection avancée
+advanced-protection:
+  anti-teleport: true
+  anti-noclip: true
+  anti-reach: true
+  anti-crasher: true
+  anti-bot: true
+
+  position-checks:
+    min-y: -64
+    max-y: 320
+    max-move-distance: 8.0
+    max-fly-speed: 1.5
+
+# 📉 Détection d'anomalies
+anomaly-detection:
+  enable: true
+  check-interval: 20 # ticks
+  packet-spike-threshold: 50
+  average-deviation: 3.5
+
+# ⚠️ Actions automatiques
+auto-actions:
+  violation-threshold: 3
+  stages:
+    1:
+      action: "warn"
+      message: "§c[ABP] §7Suspicious activity detected!"
+    2:
+      action: "kick"
+      message: "§cAntiCheat: §fBad Packet Detected"
+    3:
+      action: "tempban 1h"
+      message: "§cAntiCheat: §fRepeated violations (Bad Packet)"
+
+  notify-staff: true
+  log-to-file: true
+  backup-violations: true
+
+# 🌐 Protection réseau
+network-protection:
+  enable-geoip: false
+  geoip-api-key: "your_key_here"
+  block-vpn: false
+  block-proxy: true
+  allowed-countries: []
+  blocked-countries: []
+
+# 📊 Logging & Monitoring
+logging:
+  console-alerts: true
+  log-format: "[{date}] {player}: {violation} ({details})"
+  max-log-size: 10 # MB
+  keep-logs-days: 7
+
+# 🔧 Paramètres expérimentaux
+experimental:
+  machine-learning: false
+  deep-packet-inspection: false
+  heuristic-analysis: true
