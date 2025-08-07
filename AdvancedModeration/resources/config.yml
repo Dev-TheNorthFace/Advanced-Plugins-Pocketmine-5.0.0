@@ -1,0 +1,45 @@
+# Configuration du système de modération
+
+# Paramètres des sanctions
+sanctions:
+  max_warnings: 3 # Nombre d'avertissements avant ban automatique
+  warning_ban_duration: "7d" # Durée du ban automatique après max_warnings
+  default_tempban_duration: "1d" # Durée par défaut pour /tempban
+  default_tempmute_duration: "1h" # Durée par défaut pour /tempmute
+
+# Paramètres des reports
+reports:
+  cooldown: 300 # Cooldown entre chaque report en secondes (5 minutes)
+  max_length: 100 # Longueur maximale de la raison
+  notify_staff: true # Notifier les staff en jeu
+  discord:
+    enabled: false # Activer les webhooks Discord
+    webhook_url: "https://discord.com/api/webhooks/..." # URL du webhook
+
+# Paramètres des logs
+logging:
+  enabled: true # Activer le système de logs
+  log_chat: true # Logger les messages du chat
+  log_commands: true # Logger les commandes exécutées
+  log_sanctions: true # Logger les sanctions
+  log_file: "logs/moderation.log" # Fichier de logs
+
+# Messages personnalisés
+messages:
+  prefix: "§8[§cMod§8] §r"
+  ban_message: "§cVous avez été banni!\n§7Raison: §f{reason}\n§7Par: §f{staff}\n§7Date: §f{date}"
+  tempban_message: "§cVous avez été banni temporairement!\n§7Raison: §f{reason}\n§7Par: §f{staff}\n§7Durée: §f{duration}\n§7Fin: §f{expires}"
+  mute_message: "§cVous avez été mute!\n§7Raison: §f{reason}\n§7Par: §f{staff}\n§7Date: §f{date}"
+  tempmute_message: "§cVous avez été mute temporairement!\n§7Raison: §f{reason}\n§7Par: §f{staff}\n§7Durée: §f{duration}\n§7Fin: §f{expires}"
+  kick_message: "§cVous avez été kick!\n§7Raison: §f{reason}\n§7Par: §f{staff}"
+  warn_message: "§cVous avez reçu un avertissement!\n§7Raison: §f{reason}\n§7Par: §f{staff}\n§7Avertissement §f{current}§7/§f{max}"
+  report_success: "§aVotre report contre §f{player} §aa été envoyé avec succès!"
+
+# Paramètres du screenshare
+screenshare:
+  max_duration: 1800 # Durée maximale en secondes (30 minutes)
+  alert_message: "§cVous êtes en cours d'examen par un membre du staff!\n§7Ne vous déconnectez pas!"
+  commands_allowed: # Commandes autorisées pendant le screenshare
+    - /msg
+    - /r
+    - /helpop

@@ -1,0 +1,109 @@
+name: AdvancedModeration
+version: 1.0.0
+api: 5.0.0
+main: North\Moderation\Main
+author: North
+description: Système complet de modération avec sanctions, reports et outils staff
+commands:
+  ban:
+    description: Bannir un joueur définitivement
+    usage: "/ban <joueur> <raison>"
+    permission: moderation.ban
+  tempban:
+    description: Bannir un joueur temporairement
+    usage: "/tempban <joueur> <durée> <raison>"
+    permission: moderation.tempban
+  unban:
+    description: Débannir un joueur
+    usage: "/unban <joueur>"
+    permission: moderation.unban
+  mute:
+    description: Rendre muet un joueur définitivement
+    usage: "/mute <joueur> <raison>"
+    permission: moderation.mute
+  tempmute:
+    description: Rendre muet un joueur temporairement
+    usage: "/tempmute <joueur> <durée> <raison>"
+    permission: moderation.tempmute
+  unmute:
+    description: Rendre la parole à un joueur
+    usage: "/unmute <joueur>"
+    permission: moderation.unmute
+  kick:
+    description: Expulser un joueur du serveur
+    usage: "/kick <joueur> <raison>"
+    permission: moderation.kick
+  warn:
+    description: Donner un avertissement à un joueur
+    usage: "/warn <joueur> <raison>"
+    permission: moderation.warn
+  history:
+    description: Voir l'historique des sanctions d'un joueur
+    usage: "/history <joueur>"
+    permission: moderation.history
+  check:
+    description: Voir les informations d'un joueur
+    usage: "/check <joueur>"
+    permission: moderation.check
+  invsee:
+    description: Voir l'inventaire d'un joueur
+    usage: "/invsee <joueur>"
+    permission: moderation.invsee
+  freeze:
+    description: Geler un joueur (l'empêcher de bouger)
+    usage: "/freeze <joueur>"
+    permission: moderation.freeze
+  ss:
+    description: Démarrer un screenshare (examen du joueur)
+    usage: "/ss <joueur>"
+    permission: moderation.screenshare
+  report:
+    description: Reporter un joueur pour mauvaise conduite
+    usage: "/report <joueur> <raison>"
+    permission: moderation.report
+permissions:
+  moderation.ban:
+    description: Permet de bannir définitivement un joueur
+    default: op
+  moderation.tempban:
+    description: Permet de bannir temporairement un joueur
+    default: op
+  moderation.unban:
+    description: Permet de débannir un joueur
+    default: op
+  moderation.mute:
+    description: Permet de rendre muet un joueur définitivement
+    default: op
+  moderation.tempmute:
+    description: Permet de rendre muet un joueur temporairement
+    default: op
+  moderation.unmute:
+    description: Permet de rendre la parole à un joueur
+    default: op
+  moderation.kick:
+    description: Permet d'expulser un joueur
+    default: op
+  moderation.warn:
+    description: Permet de donner un avertissement
+    default: op
+  moderation.history:
+    description: Permet de voir l'historique des sanctions
+    default: op
+  moderation.check:
+    description: Permet de voir les informations d'un joueur
+    default: op
+  moderation.invsee:
+    description: Permet de voir l'inventaire d'un joueur
+    default: op
+  moderation.freeze:
+    description: Permet de geler un joueur
+    default: op
+  moderation.screenshare:
+    description: Permet de démarrer un screenshare
+    default: op
+  moderation.report:
+    description: Permet d'utiliser le système de report
+    default: true
+  moderation.report.view:
+    description: Permet de voir les reports
+    default: op
