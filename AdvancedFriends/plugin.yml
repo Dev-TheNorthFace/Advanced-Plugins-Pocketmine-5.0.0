@@ -1,0 +1,38 @@
+name: AdvancedFriends
+version: 1.0.0
+main: North\Friends\Main
+api: 5.0.0
+description: Un système d'amis avancé avec GUI, téléportation, cadeaux et messagerie
+author: North
+commands:
+  friend:
+    description: Gestionnaire d'amis principal
+    usage: |
+      /friend add <player> - Envoyer une demande d'ami
+      /friend accept <player> - Accepter une demande
+      /friend deny <player> - Refuser une demande
+      /friend list - Voir vos amis
+      /friend remove <player> - Supprimer un ami
+      /friend requests - Voir les demandes
+      /friend tp <player> - Se téléporter à un ami
+      /friend block <player> - Bloquer un joueur
+      /friend gift <player> - Envoyer un cadeau
+      /friend gui - Ouvrir le menu d'amis
+    aliases: [friends, f]
+  msg:
+    description: Envoyer un message privé à un ami
+    usage: "/msg <player> <message>"
+    aliases: [m, tell, whisper, w]
+permissions:
+  advancedfriends.command.friend:
+    description: Permet d'utiliser les commandes d'amis
+    default: true
+  advancedfriends.command.msg:
+    description: Permet d'utiliser la messagerie privée
+    default: true
+  advancedfriends.bypass.limits:
+    description: Contourne les limites de demandes et de cadeaux
+    default: op
+  advancedfriends.teleport.any:
+    description: Permet de se téléporter sans confirmation
+    default: false

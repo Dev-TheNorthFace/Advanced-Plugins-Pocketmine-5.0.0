@@ -1,0 +1,76 @@
+# Configuration du système d'amis
+
+# Paramètres de base
+settings:
+  max-friends: 50 # Nombre maximum d'amis par joueur
+  request-expire: 86400 # Temps avant expiration d'une demande (en secondes, 86400 = 1 jour)
+  teleport-delay: 5 # Délai avant téléportation (en secondes)
+  cooldowns:
+    friend-request: 30 # Cooldown entre les demandes (secondes)
+    teleport: 60 # Cooldown entre les téléportations (secondes)
+    gift: 3600 # Cooldown entre les cadeaux (secondes)
+
+# Paramètres de notification
+notifications:
+  friend-join: true # Notifier quand un ami se connecte
+  friend-quit: true # Notifier quand un ami se déconnecte
+  friend-world-change: true # Notifier quand un ami change de monde
+  friend-achievement: true # Notifier les succès des amis
+  request-received: true # Notifier les nouvelles demandes
+
+# Paramètres par défaut des joueurs
+default-settings:
+  allow-teleport: true # Autoriser les téléportations par défaut
+  allow-gifts: true # Autoriser les cadeaux par défaut
+  allow-messages: true # Autoriser les messages par défaut
+  auto-deny-requests: false # Refuser automatiquement les demandes par défaut
+  show-status: true # Afficher le statut en ligne par défaut
+
+# Système de points d'amitié (optionnel)
+friendship-points:
+  enabled: true # Activer le système de points
+  gain-per-hour: 10 # Points gagnés par heure passée ensemble
+  max-points: 10000 # Points maximum
+  rewards:
+    100: "§aBadge d'ami" # Récompense à 100 points
+    500: "§6Effet de particules" # Récompense à 500 points
+    1000: "§dCosmétique exclusif" # Récompense à 1000 points
+
+# Protection anti-spam
+anti-spam:
+  max-requests-per-day: 10 # Maximum de demandes envoyées par jour
+  max-messages-per-minute: 5 # Maximum de messages par minute
+  max-gifts-per-day: 3 # Maximum de cadeaux envoyés par jour
+
+# Options de l'interface graphique
+gui-settings:
+  show-online-first: true # Afficher les amis en ligne en premier
+  show-friendship-level: true # Afficher le niveau d'amitié
+  show-last-seen: true # Afficher la dernière connexion
+  show-playtime-together: true # Afficher le temps de jeu ensemble
+
+# Paramètres de la base de données
+storage:
+  type: yaml # Format de stockage (yaml, json, sqlite)
+  save-interval: 900 # Intervalle de sauvegarde (secondes, 900 = 15 min)
+  keep-message-history: true # Garder un historique des messages
+  history-duration: 2592000 # Durée de conservation (secondes, 2592000 = 30 jours)
+
+# Paramètres des groupes d'amis (optionnel)
+friend-groups:
+  enabled: true # Activer les groupes d'amis
+  max-groups: 5 # Nombre maximum de groupes
+  max-members-per-group: 8 # Membres maximum par groupe
+  default-groups: # Groupes par défaut
+    - "Proches"
+    - "Membres de la faction"
+    - "Coéquipiers"
+
+# Paramètres des événements d'amis (optionnel)
+friend-events:
+  enabled: true # Activer les événements spéciaux
+  weekly-quests: true # Quêtes hebdomadaires entre amis
+  joint-rewards: true # Récompenses pour jeu en commun
+  bonus:
+    xp-multiplier: 1.2 # Multiplicateur d'XP en groupe
+    loot-bonus: 1.15 # Bonus de butin en groupe
