@@ -1,0 +1,8 @@
+antispider:
+  enable_vertical_climb_check: true
+  max_allowed_y_rise_per_tick: 0.5
+  max_ticks_against_wall: 4
+  allow_on_ladders: true
+  allow_with_jumpboost: false
+  exempt_creative: true
+  freeze_on_detected: true

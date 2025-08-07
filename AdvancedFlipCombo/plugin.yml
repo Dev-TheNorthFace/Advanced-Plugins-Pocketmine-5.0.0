@@ -1,0 +1,17 @@
+name: AdvancedFlipCombo
+version: 1.0.0
+main: North\FlipCombo\Main
+api: 5.0.0
+description: Un jeu de pile ou face en combo avec multiplicateurs progressifs
+author: North
+commands:
+  flipcombo:
+    description: Lance un jeu de pile ou face en combo
+    usage: "/flipcombo <mise> [pile|face|continue|cashout]"
+    aliases: ["fc"]
+permissions:
+  flipcombo.use:
+    description: Permet d'utiliser la commande /flipcombo
+    default: true
+depend:
+  - EconomyAPI

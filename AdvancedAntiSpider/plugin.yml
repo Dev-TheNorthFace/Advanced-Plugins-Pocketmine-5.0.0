@@ -1,0 +1,18 @@
+name: AdvancedAntiSpider
+version: 1.0.0
+main: North\AntiSpider\Main
+api: 5.0.0
+authors: North
+description: "Détection avancée du cheat Spider pour PocketMine 5.0.0"
+commands:
+  spiderstats:
+    description: "Affiche les statistiques de détection Spider"
+    usage: "/spiderstats [joueur]"
+    permission: antispider.stats
+permissions:
+  antispider.stats:
+    description: "Permission pour utiliser la commande /spiderstats"
+    default: op
+  antispider.bypass:
+    description: "Permet de bypasser la détection"
+    default: false

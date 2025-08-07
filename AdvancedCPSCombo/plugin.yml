@@ -1,0 +1,25 @@
+name: AdvancedCPSCombo
+version: 1.0.0
+main: North\CPS\Main
+api: 5.0.0
+author: North
+description: "Système avancé de détection d'auto-click et statistiques PvP"
+commands:
+  cpsstats:
+    description: "Affiche les statistiques CPS/PvP"
+    usage: "/cpsstats [joueur]"
+    permission: cpscore.stats
+  cpscore:
+    description: "Infos du système CPSCore"
+    usage: "/cpscore"
+    permission: cpscore.admin
+permissions:
+  cpscore.stats:
+    description: "Permet d'utiliser /cpsstats"
+    default: true
+  cpscore.alerts:
+    description: "Reçoit les alertes anti-triche"
+    default: op
+  cpscore.admin:
+    description: "Accès aux commandes admin"
+    default: op

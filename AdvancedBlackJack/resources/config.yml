@@ -1,0 +1,65 @@
+# Configuration du plugin AdvancedBlackjack
+
+# Paramètres de base
+settings:
+  min_bet: 100
+  max_bet: 10000
+  default_currency: "€"
+  allow_double_down: true
+  allow_splitting: false # À implémenter dans une future version
+  dealer_hits_on_soft_17: true
+
+# Récompenses
+payouts:
+  normal_win: 2.0
+  blackjack: 2.5
+  push: 1.0
+  surrender: 0.5 # À implémenter
+  insurance: 2.0 # À implémenter
+
+# Messages personnalisés
+messages:
+  game_start: "§6♠ §eBlackjack §6♠ §7Mise: §a%bet%%currency%"
+  player_win: "§a🎉 Vous gagnez §2%amount%%currency%§a!"
+  player_lose: "§c💀 Vous perdez §4%amount%%currency%§c!"
+  push: "§e🤝 Égalité! Vous récupérez votre mise de §6%amount%%currency%"
+  blackjack: "§d⚡ Blackjack! Payout §5x%multiplier%"
+  bust: "§4💥 Bust! Vous avez dépassé 21!"
+
+# Système de streaks
+streak_bonuses:
+  enabled: true
+  levels:
+    - {wins: 3, multiplier: 1.1}
+    - {wins: 5, multiplier: 1.25}
+    - {wins: 10, multiplier: 1.5}
+  reset_on_loss: true
+
+# Protection contre l'addiction
+addiction_protection:
+  enabled: true
+  max_games_per_hour: 30
+  cooldown_message: "§cVous avez joué trop de parties. Veuillez attendre %time%"
+  force_cooldown: "10 minutes"
+
+# Statistiques
+statistics:
+  track_stats: true
+  top_players_limit: 10
+  save_interval: 15 # en minutes
+
+# Paramètres des cartes
+card_design:
+  hidden_card: "[? ?]"
+  colors:
+    hearts: "§c" # Rouge
+    diamonds: "§c" # Rouge
+    clubs: "§0" # Noir
+    spades: "§0" # Noir
+  back_color: "§8"
+
+# Paramètres expérimentaux (beta)
+experimental:
+  multi_decker: false
+  side_bets: false
+  tournament_mode: false

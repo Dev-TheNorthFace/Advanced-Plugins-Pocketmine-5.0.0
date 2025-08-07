@@ -1,0 +1,22 @@
+name: AdvancedDice
+version: 1.0.0
+main: North\Dice\Main
+api: 5.0.0
+description: Un jeu de dé avec récompenses aléatoires
+author: North
+commands:
+  dice:
+    description: Lance un dé et gagne des récompenses
+    usage: "/dice"
+    permission: dicegame.use
+  dicestats:
+    description: Affiche vos statistiques de lancer de dé
+    usage: "/dicestats [joueur]"
+    permission: dicegame.stats
+permissions:
+  dicegame.use:
+    description: Permet d'utiliser la commande /dice
+    default: true
+  dicegame.stats:
+    description: Permet d'utiliser la commande /dicestats
+    default: true

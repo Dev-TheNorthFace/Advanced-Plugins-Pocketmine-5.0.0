@@ -1,0 +1,43 @@
+# Configuration de l'AdvancedAntiSneakTP - PocketMine 5.0.0
+
+antisneaktp:
+  # Activation des différentes vérifications
+  enable_module: true
+  enable_speed_check: true
+  enable_teleport_check: true
+  enable_chunk_check: true
+
+  # Paramètres de détection
+  max_sneak_speed: 0.08  # en blocs/tick (valeur normale ~0.05)
+  max_sneak_teleport_distance: 2.5  # distance max en blocs
+  max_sneak_jump_height: 1.2  # hauteur max de saut en sneak
+
+  # Options de sécurité
+  freeze_on_flag: true
+  alert_staff: true
+  exempt_creative: true
+  exempt_permission: "antisneaktp.bypass"
+
+  # Actions automatiques
+  warn_threshold: 2     # nombre de flags avant warn
+  kick_threshold: 3     # nombre de flags avant kick
+  ban_threshold: 5      # nombre de flags avant ban
+
+  # Messages (support couleur avec §)
+  messages:
+    warning: "§c[AntiSneakTP] §7Comportement suspect détecté!"
+    frozen: "§c[AntiSneakTP] §7Vous avez été freeze pour suspicion de cheat!"
+    kick: "§c[AntiSneakTP] §7Kick pour SneakTP détecté"
+    ban: "§c[AntiSneakTP] §7Ban pour SneakTP répété"
+
+# Paramètres avancés (ne pas modifier sans connaissance)
+advanced:
+  sample_rate: 5  # ticks entre chaque vérification
+  history_size: 10 # nombre de positions à tracker
+  debug_mode: false
+
+# Configuration des webhooks Discord (optionnel)
+discord:
+  enabled: false
+  webhook_url: "https://discord.com/api/webhooks/..."
+  alert_message: "**SneakTP détecté**\nJoueur: {player}\nType: {type}\nServeur: {server}"

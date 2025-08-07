@@ -1,0 +1,22 @@
+# AdvancedCPSCombo Configuration
+
+cps:
+  max: 16 # CPS maximum autorisé avant flag
+  warn: 13 # CPS à partir duquel on log dans les fichiers
+  auto_flag_constant_cps: true # Détection automatique des CPS constants
+  kick_on_cps_limit: true # Kick automatique quand le CPS max est dépassé
+  delay_tolerance_ms: 40 # Délai minimum entre clicks (en ms)
+
+combo:
+  max: 20 # Combo maximum autorisé avant flag
+  flag_on_no_kb_combo: true # Détection des combos sans knockback
+  log_combos: true # Enregistrer les combos dans les logs
+
+alerts:
+  notify_moderators: true # Alerter les modérateurs en jeu
+  log_to_console: true # Afficher les alertes dans la console
+  log_to_file: true # Enregistrer les logs dans des fichiers
+
+permissions:
+  alerts: "cpscore.alerts" # Permission pour recevoir les alertes
+  admin: "cpscore.admin" # Permission pour les commandes admin

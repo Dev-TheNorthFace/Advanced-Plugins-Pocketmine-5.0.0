@@ -1,0 +1,36 @@
+# Configuration de AdvancedFlipCombo
+
+# Paramètres de base
+settings:
+  max_bet: 10000
+  min_bet: 100
+  cooldown: 10 # en secondes
+  default_multipliers: [2, 4, 8]
+  allow_extreme_mode: false
+
+# Messages
+messages:
+  start_game: "§6🪙 §e/flipcombo - Jeu de pile ou face en combo"
+  choose_side: "§eChoisissez: §a/flipcombo pile §eou §c/flipcombo face"
+  win: "§a✔ Victoire! Multiplicateur: x%multiplier%"
+  lose: "§c✖ Perdu! Vous avez perdu votre mise de $%bet%"
+  cashout: "§6💰 Vous avez encaissé $%winnings% (x%multiplier% votre mise)"
+  max_combo: "§6💰 Bravo! Vous avez complété le combo et gagné $%winnings% (x%multiplier% votre mise)"
+  broadcast: "§6🎯 %player% a enchaîné %stage% flips d'affilée!\n§6💵 Il remporte $%winnings% à partir de $%bet%! 🔥"
+  insufficient_funds: "§cVous n'avez pas assez d'argent."
+  invalid_bet: "§cLa mise doit être entre %min% et %max%."
+  cooldown: "§cVous devez attendre %seconds% secondes avant de rejouer."
+
+# Paramètres avancés
+advanced:
+  animation_delay: 1 # en secondes
+  sound_effects: true
+  particles: true
+  weekly_leaderboard: true
+  weekend_bonus: 0.25 # 25% de bonus le week-end
+
+# Extreme Mode (si activé)
+extreme_mode:
+  max_stages: 4
+  stage4_multiplier: 16
+  unlock_after_wins: 10

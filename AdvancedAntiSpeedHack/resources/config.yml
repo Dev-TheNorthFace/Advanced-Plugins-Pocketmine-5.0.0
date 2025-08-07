@@ -1,0 +1,50 @@
+# Configuration de l'AdvancedAntiSpeedHack - PocketMine 5.0.0
+
+antispeedhack:
+  # Vitesses maximales autorisées (en blocs/tick)
+  speed_limits:
+    max_walk_speed: 0.215   # Vitesse normale de marche
+    max_sprint_speed: 0.27  # Vitesse de sprint (20% plus rapide)
+    max_jump_speed: 0.35    # Vitesse pendant un saut
+    max_in_water: 0.13      # Dans l'eau/soul sand
+    max_sneak: 0.1          # En mode sneak
+    max_flying: 0.5         # Vitesse en vol créatif
+
+  # Paramètres des effets
+  effect_settings:
+    max_speed_effect_level: 2  # Niveau maximum d'effet de vitesse autorisé (0 = désactivé)
+    speed_boost_per_level: 0.2 # Multiplicateur de vitesse par niveau d'effet
+
+  # Paramètres de détection
+  detection:
+    check_diagonal_boost: true  # Détecte les boosts diagonaux
+    check_water_boost: true     # Vérifie la vitesse dans l'eau
+    check_sneak_boost: true     # Vérifie la vitesse en sneak
+    sample_size: 5             # Nombre de ticks à analyser
+    violation_threshold: 3      # Nombre de violations avant action
+
+  # Actions
+  actions:
+    freeze_on_detect: true      # Gèle le joueur suspect
+    freeze_duration: 10         # Durée du gel (secondes)
+    warn_message: "§cAttention: Mouvement suspect détecté!"
+    kick_on_major_violation: true
+    kick_message: "§cKick: Mouvement anormal détecté"
+
+  # Exemptions
+  exemptions:
+    creative_mode: true         # Ignore les joueurs en mode créatif
+    bypass_permission: true     # Respecte la permission antispeed.bypass
+    op_players: false           # Ignore les OP (déconseillé)
+
+  # Logging et monitoring
+  logging:
+    log_to_console: true
+    log_to_file: true
+    webhook_url: ""             # URL Discord webhook pour les alertes
+
+  # Paramètres avancés
+  advanced:
+    motion_spoof_check: true    # Vérifie les incohérences de mouvement
+    historical_analysis: true  # Analyse sur 5 secondes
+    strict_mode: false         # Mode strict (plus sensible)

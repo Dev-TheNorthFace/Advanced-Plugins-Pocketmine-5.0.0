@@ -1,0 +1,46 @@
+# Configuration de l'AdvancedAntiSpam - PocketMine 5.0.0
+
+antispamchat:
+  # Paramètres de temporisation
+  min_message_interval: 1.5  # Délai minimum entre 2 messages (en secondes)
+
+  # Paramètres de formatage
+  max_caps_percentage: 70    # Pourcentage maximum de majuscules autorisé
+  max_special_chars_percentage: 30  # Pourcentage maximum de caractères spéciaux
+  max_message_length: 150    # Longueur maximale d'un message
+
+  # Détection de répétition
+  block_repeated_messages: true  # Activer la détection des messages similaires
+  similarity_threshold: 80       # Pourcentage de similarité pour déclencher l'alerte
+
+  # Mots interdits (insultes, pubs, etc.)
+  blocked_words:
+    - "aternos"
+    - "discord.gg/"
+    - "join my server"
+    - "kill yourself"
+    - "ip:"
+    - "serveur gratuit"
+    - "http://"
+    - "https://"
+    - "www."
+    - ".com"
+    - ".fr"
+    - ".net"
+
+  # Système de sanctions
+  punishments:
+    warn_on_first: true        # Avertissement au 1er spam
+    mute_on_second: true       # Mute au 2ème spam
+    mute_duration: 300         # Durée du mute (en secondes)
+    ban_on_third: false        # Ban au 3ème spam (désactivé par défaut)
+    ban_duration: 86400        # Durée du ban si activé (1 jour par défaut)
+
+  # Options avancées
+  enable_discord_webhook: false
+  discord_webhook_url: "https://discord.com/api/webhooks/..."
+
+  # Exemptions
+  bypass_permissions:
+    - "antispam.bypass"
+    - "staff.chat"

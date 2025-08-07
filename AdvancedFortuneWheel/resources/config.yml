@@ -1,0 +1,113 @@
+# AdvancedFortuneWheel Configuration
+# Version: 1.0.0
+
+settings:
+  # Animation settings
+  spin_duration: 5      # Durée de l'animation en secondes
+  spin_effects: true    # Activer les effets visuels pendant le spin
+  broadcast_legendary: true  # Annoncer les gains légendaires à tout le serveur
+
+# Niveaux de roue disponibles
+wheel_levels:
+  classic:
+    display_name: "§aClassique"
+    cost: 2500
+    unlock_message: "§aVous avez débloqué la roue Classique!"
+    required_spins: 0
+    weight: 100  # Poids pour la sélection aléatoire
+
+  pro:
+    display_name: "§6Pro"
+    cost: 10000
+    unlock_message: "§6Vous avez débloqué la roue Pro!"
+    required_spins: 50
+    weight: 60
+
+  legendary:
+    display_name: "§d§lLégendaire"
+    cost: 25000
+    unlock_message: "§d§lVous avez débloqué la roue Légendaire!"
+    required_spins: 150
+    weight: 20
+
+# Récompenses par rareté
+rewards:
+  common:
+    weight: 40
+    items:
+      - type: money
+        amount: 100
+        message: "§aVous avez gagné §2100$§a!"
+      - type: money
+        amount: 150
+        message: "§aVous avez gagné §2150$§a!"
+
+  uncommon:
+    weight: 30
+    items:
+      - type: money
+        amount: 500
+        message: "§6Vous avez gagné §2500$§6!"
+      - type: item
+        item_id: 278  # Diamond Pickaxe
+        count: 1
+        message: "§6Vous avez gagné une pioche en diamant!"
+
+  medium:
+    weight: 15
+    items:
+      - type: money
+        amount: 1000
+        message: "§eVous avez gagné §21000$§e!"
+      - type: item
+        item_id: 322  # Golden Apple
+        count: 3
+        message: "§eVous avez gagné 3 pommes en or!"
+
+  rare:
+    weight: 10
+    items:
+      - type: money
+        amount: 5000
+        message: "§9Vous avez gagné §25000$§9!"
+      - type: command
+        command: "kit rare {player}"
+        message: "§9Vous avez gagné un kit rare!"
+
+  legendary:
+    weight: 4
+    items:
+      - type: money
+        amount: 15000
+        message: "§d§lVous avez gagné §215000$§d§l!"
+      - type: command
+        command: "kit legendary {player}"
+        message: "§d§lVous avez gagné le kit légendaire!"
+
+  nothing:
+    weight: 1
+    items:
+      - type: none
+        message: "§cDommage! Vous n'avez rien gagné cette fois."
+
+  trap:
+    weight: 0  # Seulement disponible dans les roues supérieures
+    items:
+      - type: money
+        amount: -25000
+        message: "§4§lPiège! Vous perdez §225000$§4§l!"
+
+# Système de malchance
+badluck_system:
+  enabled: true
+  increment_per_loss: 1
+  max_badluck: 50
+  chance_boost_per_point: 2  # Pourcentage
+
+# Messages
+messages:
+  not_enough_money: "§cVous n'avez pas assez d'argent. Il vous manque §4${amount}§c."
+  no_spins: "§cVous n'avez pas de spins disponibles. Achetez-en avec /wheelspin buy"
+  spin_purchased: "§aVous avez acheté un spin pour §2${cost}$§a. Utilisez §2/wheelspin spin§a pour jouer!"
+  level_up: "§6Félicitations! Votre roue est maintenant niveau {level}!"
+  broadcast_legendary: "§6 {player} a gagné un prix légendaire avec la roue de la fortune!"

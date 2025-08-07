@@ -1,0 +1,31 @@
+name: AdvancedJackPot
+version: 1.0.0
+main: North\JackPot\Main
+api: 5.0.0
+description: Un système de jackpot avec mise proportionnelle et tirage aléatoire
+author: North
+commands:
+  jackpot:
+    description: Participer au jackpot avec un montant
+    usage: "/jackpot <montant>"
+    permission: jackpot.command
+  jackpotinfo:
+    description: Voir les informations du jackpot en cours
+    usage: "/jackpotinfo"
+    aliases: ["jinfo"]
+    permission: jackpot.info
+  jackpotop:
+    description: Voir le classement des gagnants
+    usage: "/jackpotop"
+    aliases: ["jtop"]
+    permission: jackpot.top
+permissions:
+  jackpot.command:
+    description: Permet d'utiliser la commande /jackpot
+    default: true
+  jackpot.info:
+    description: Permet de voir les infos du jackpot
+    default: true
+  jackpot.top:
+    description: Permet de voir le classement
+    default: true

@@ -1,0 +1,22 @@
+name: AdvancedAntiReach
+version: 1.0.0
+main: North\AntiReach\Main
+api: 5.0.0
+authors: North
+description: "Système avancé de détection de Reach"
+commands:
+  reachstats:
+    description: "Voir les stats de reach d'un joueur"
+    usage: "/reachstats [joueur]"
+    permission: antireach.stats
+  antireach:
+    description: "Commandes admin de l'AntiReach"
+    usage: "/antireach <reload|freeze|unfreeze>"
+    permission: antireach.admin
+permissions:
+  antireach.stats:
+    description: "Voir les statistiques de reach"
+    default: op
+  antireach.admin:
+    description: "Gérer l'AntiReach"
+    default: op

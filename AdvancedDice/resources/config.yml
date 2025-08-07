@@ -1,0 +1,58 @@
+# Paramètres de base
+settings:
+  cost_per_roll: 500          # Coût en niveaux d'XP pour lancer le dé (0 pour désactiver)
+  cooldown: 10                # Cooldown en secondes entre deux lancers
+  use_xp: true                # Utiliser l'XP comme monnaie (false pour utiliser une économie tierce)
+
+# Récompenses
+rewards:
+  1-10:
+    type: none                # Aucune récompense
+    message: "§cPas de chance... Réessayez !"
+  11-30:
+    type: money
+    amount: 500
+    message: "§aVous gagnez 500$ !"
+  31-60:
+    type: money
+    amount: 1000
+    message: "§aVous gagnez 1000$ !"
+  61-90:
+    type: money
+    amount: 2500
+    message: "§aVous gagnez 2500$ !"
+  91-99:
+    type: mixed
+    rewards:
+      - type: money
+        amount: 5000
+        chance: 50
+    message: "§6Super chance ! Vous gagnez une récompense aléatoire !"
+  100:
+    type: jackpot
+    amount: 10000
+    message: "§l§6JACKPOT !!! Vous gagnez 10 000$ !"
+    fireworks: true            # Feu d'artifice pour le jackpot
+    broadcast: true           # Annonce globale pour le jackpot
+
+# Paramètres des annonces
+announcements:
+  enabled: true
+  threshold: 90               # Score minimum pour annoncer publiquement
+  message: "§e🎉 {PLAYER} a tiré un {SCORE} sur /dice !"
+
+# Effets visuels
+effects:
+  roll_animation: true        # Animation pendant le lancer
+  roll_duration: 2            # Durée de l'animation en secondes
+  sound_effects: true         # Sons pendant le lancer
+
+# Limites
+limits:
+  daily_rolls: 5              # Nombre maximum de lancers par jour (0 pour illimité)
+  bypass_limit_permission: "dicegame.vip"  # Permission pour bypass la limite
+
+# Statistiques
+statistics:
+  track_leaderboard: true     # Activer le classement
+  top_players: 10             # Nombre de joueurs dans le top

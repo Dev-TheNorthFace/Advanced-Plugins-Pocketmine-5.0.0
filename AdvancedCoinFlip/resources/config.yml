@@ -1,0 +1,47 @@
+# Paramètres du AdvancedCoinFlip
+
+# Montants minimum et maximum pour les paris
+min_amount: 100
+max_amount: 100000
+
+# Pourcentage prélevé pour le jackpot (5% par défaut)
+jackpot_percentage: 5
+
+# Pourcentage de taxe sur les gains (5% par défaut)
+tax_percentage: 5
+
+# Montant initial du jackpot
+jackpot: 0
+
+# Paramètres des animations
+animation:
+  duration: 3 # en secondes
+  particles: true
+  sounds: true
+  titles: true
+
+# Messages personnalisés
+messages:
+  not_enough_money: "§cVous n'avez pas assez d'argent !"
+  invalid_amount: "§cMontant invalide ! Doit être entre %min% et %max%"
+  cooldown: "§cAttendez %seconds% secondes avant de refaire un coinflip !"
+  win: "§aVous avez gagné §e%amount%$ §aavec §6%result%§a !"
+  lose: "§cVous avez perdu §e%amount%$ §cavec §6%result%§c !"
+  jackpot_info: "§6Jackpot actuel : §e%amount%$"
+
+# Paramètres du leaderboard
+leaderboard:
+  update_interval: 3600 # en secondes (1 heure)
+  max_entries: 10
+
+# Paramètres du mode 1v1
+duel:
+  enabled: true
+  timeout: 300 # en secondes (5 minutes)
+  tax_percentage: 5
+
+# Restrictions
+restrictions:
+  cooldown: 5 # en secondes
+  daily_limit: 50 # nombre maximum de coinflips par jour
+  max_wager_per_hour: 500000 # montant maximum misé par heure

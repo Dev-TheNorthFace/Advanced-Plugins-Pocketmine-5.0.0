@@ -1,0 +1,18 @@
+name: AdvancedFortuneWheel
+version: 1.0.0
+main: North\FortuneWheel\Main
+api: 5.0.0
+description: Un système de roue de la fortune avec différents niveaux et récompenses
+author: North
+commands:
+  wheelspin:
+    description: Permet d'acheter et d'utiliser la roue de la fortune
+    usage: "/wheelspin [buy|spin|stats]"
+    aliases: ["ws", "roue"]
+permissions:
+  fortunewheel.use:
+    description: Permet d'utiliser la commande /wheelspin
+    default: true
+  fortunewheel.admin:
+    description: Permissions administrateur pour le plugin FortuneWheel
+    default: op

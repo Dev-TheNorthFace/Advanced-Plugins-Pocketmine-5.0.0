@@ -1,0 +1,49 @@
+# Configuration de l'AdvancedAntiReach - PocketMine 5.0.0
+
+antireach:
+  # Distances de détection (en blocs)
+  max_distance: 3.3         # Reach maximum autorisé (3 blocs normaux + 0.3 de tolérance)
+  warn_threshold: 3.1       # Seuil pour envoyer un avertissement au joueur
+  auto_flag_threshold: 3.4  # Seuil pour flag automatique
+
+  # Comportement
+  auto_freeze_on_flag: true # Geler automatiquement le joueur quand il est flaggé
+  exempt_ping_above: 250    # Ignorer les joueurs avec un ping supérieur (en ms)
+
+  # Méthodes de détection
+  enable_angle_check: true  # Activer la vérification des angles de frappe
+  ghost_entity_test: true   # Activer le test d'entité fantôme
+
+  # Punitions (freeze/kick/ban/warn)
+  punishments:
+    first_offense: "freeze" # Première infraction
+    second_offense: "kick"  # Deuxième infraction
+    third_offense: "ban"    # Troisième infraction
+
+  # Paramètres avancés
+  advanced:
+    pattern_detection:
+      sample_size: 10       # Nombre de hits analysés pour les patterns
+      consistency_threshold: 0.2 # Variation maximale pour un pattern suspect
+    angle:
+      yaw_tolerance: 30     # Tolérance angle horizontal (en degrés)
+      pitch_tolerance: 30   # Tolérance angle vertical (en degrés)
+
+# Paramètres des messages
+messages:
+  freeze: "§cVous avez été gelé par l'Anti-Cheat!"
+  unfreeze: "§aVous avez été dégelé!"
+  warning: "§e[AVERTISSEMENT] §fVotre reach est suspect!"
+  flag: "§4[ANTI-CHEAT] §cComportement anormal détecté!"
+
+# Paramètres du ghost entity
+ghost_entity:
+  distance: 4.5            # Distance de spawn de l'entité fantôme
+  duration: 10             # Durée d'affichage (en secondes)
+  text: "§cGhost Entity"   # Texte affiché
+
+# Logging des détections
+logging:
+  enabled: true
+  file: "reach_violations.log"
+  format: "[{date}] {player} - {reason} (Reach: {reach})"

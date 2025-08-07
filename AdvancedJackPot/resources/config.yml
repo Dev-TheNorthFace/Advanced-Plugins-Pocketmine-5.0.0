@@ -1,0 +1,40 @@
+# Configuration du AdvancedJackPot
+
+# Paramètres de base
+min_bet: 100
+max_bet: 10000
+round_duration: 300  # Durée du round en secondes (300 = 5 minutes)
+tax_percentage: 5    # Pourcentage prélevé sur le pot total
+
+# Paramètres visuels
+enable_effects: true
+announce_winner: true
+broadcast_messages: true
+show_actionbar: true
+
+# Paramètres de jeu
+max_participants: 0  # 0 = illimité
+cooldown_time: 60     # Temps entre deux participations (secondes)
+
+# Messages personnalisables
+messages:
+  join: "§a{player} §7a misé §e{amount}§7$ dans le jackpot! Pot total: §e{total}§7$"
+  timer: "§eTirage dans: {time}"
+  win: "§6§l🎉 {winner} §r§7a gagné le jackpot avec §e{prize}§7$ (mise: §e{bet}§7$)!"
+  not_enough_money: "§cVous n'avez pas assez d'argent!"
+  invalid_amount: "§cMontant invalide! Minimum: {min}, Maximum: {max}"
+  cooldown: "§cVous devez attendre {time} avant de participer à nouveau"
+  max_participants: "§cLe jackpot a atteint le nombre maximum de participants!"
+
+# Récompenses optionnelles
+rewards:
+  enable_loser_rewards: false
+  loser_reward: "key:basic"
+  enable_consolation_prize: false
+  consolation_percentage: 10  # % du pot pour les perdants
+
+# Paramètres de logs
+logging:
+  log_to_console: true
+  log_to_file: true
+  log_format: "[{date}] {winner} a gagné {prize}$ avec une mise de {bet}$ (Total: {total}$)"

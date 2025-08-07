@@ -1,0 +1,29 @@
+name: AdvancedCoinFlip
+version: 1.0.0
+main: North\CoinFlip\Main
+api: 5.0.0
+description: Un système de pile ou face avec jackpot, statistiques et classements
+author: North
+commands:
+  coinflip:
+    description: Lance un pile ou face avec une mise
+    usage: "/coinflip <montant> [pile|face]"
+    aliases: ["cf"]
+  coinflipstats:
+    description: Affiche vos statistiques de coinflip
+    usage: "/coinflipstats"
+    aliases: ["cfs"]
+  coinfliptop:
+    description: Affiche le classement des joueurs
+    usage: "/coinfliptop"
+    aliases: ["cft"]
+permissions:
+  coinflip.use:
+    description: Permet d'utiliser la commande /coinflip
+    default: true
+  coinflip.stats:
+    description: Permet de voir ses statistiques
+    default: true
+  coinflip.top:
+    description: Permet de voir le classement
+    default: true

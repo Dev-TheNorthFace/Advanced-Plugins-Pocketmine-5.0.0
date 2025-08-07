@@ -1,0 +1,18 @@
+name: AntiTpTap
+version: 1.0.0
+main: North\AntiTpTap\Main
+api: 5.0.0
+author: North
+description: "Détection avancée des tricheurs utilisant TpTap/GhostHand"
+commands:
+  tptapstats:
+    description: "Affiche les statistiques TpTap d'un joueur"
+    usage: "/tptapstats [joueur]"
+    permission: antitptap.stats
+permissions:
+  antitptap.bypass:
+    description: "Permet de bypasser les détections"
+    default: op
+  antitptap.stats:
+    description: "Permet d'utiliser la commande /tptapstats"
+    default: op

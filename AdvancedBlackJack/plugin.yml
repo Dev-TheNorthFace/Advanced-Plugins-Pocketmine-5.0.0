@@ -1,0 +1,15 @@
+name: AdvancedBlackJack
+version: 1.0.0
+main: North\BlackJack\Main
+api: 5.0.0
+author: North
+description: Un jeu de Blackjack complet avec mises, statistiques et classements
+commands:
+  blackjack:
+    description: "Jouer au Blackjack contre le serveur"
+    usage: "/blackjack start|hit|stand|double|stats|top"
+    aliases: ["bj"]
+permissions:
+  blackjack.play:
+    description: "Permission pour jouer au Blackjack"
+    default: true

@@ -1,0 +1,18 @@
+name: AdvancedAntiSpamChat
+version: 1.0.0
+main: North\AntiSpamChat\Main
+api: 5.0.0
+description: Système avancé de détection et prévention du spam dans le chat
+author: North
+commands:
+  spamstats:
+    description: "Affiche les statistiques anti-spam d'un joueur"
+    usage: "/spamstats <joueur>"
+    permission: "antispam.stats"
+permissions:
+  antispam.stats:
+    description: "Permet d'utiliser la commande /spamstats"
+    default: op
+  antispam.bypass:
+    description: "Permet de contourner les vérifications anti-spam"
+    default: op

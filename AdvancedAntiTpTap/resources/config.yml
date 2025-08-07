@@ -1,0 +1,38 @@
+# Configuration AdvancedAntiTpTap - Détection des téléportations illégitimes
+
+# █ Distance maximale autorisée
+max_attack_distance: 4.2  # Distance max pour attaquer une entité (blocs)
+max_interact_distance: 5.0  # Distance max pour interagir avec un bloc
+
+# █ Paramètres de détection
+freeze_on_tp_spike: true  # Gèle le joueur si téléportation suspecte
+check_line_of_sight: true  # Vérifie si la cible est visible
+enable_collision_check: true  # Vérifie les collisions bypassées
+ping_compensation: true  # Compense les faux-positifs dus au haut ping
+
+# █ Seuils de détection
+teleport_threshold: 5.0  # Distance minimale pour flag un TP (blocs)
+time_threshold: 100  # Temps max entre 2 positions (ms)
+violation_expire: 600  # Temps avant reset des violations (secondes)
+
+# █ Actions automatiques
+punishments:
+  1: "warn %player%"
+  2: "freeze %player% 30"
+  3: "kick %player% TpTap détecté"
+  4: "ban %player% 7d Cheat (TpTap)"
+
+# █ Exemptions
+exempt_admins: true  # Les admins bypassent les détections
+exempt_permission: "antitptap.bypass"  # Permission d'exemption
+
+# █ Logging & Monitoring
+log_violations: true
+log_file: "logs/tptap_violations.log"
+broadcast_staff: true
+webhook_url: ""  # URL Discord Webhook pour les alertes
+
+# █ Paramètres avancés
+sample_rate: 10  # Fréquence d'échantillonnage (ticks)
+motion_threshold: 0.1  # Seuil de mouvement minimum
+simulation_checks: true  # Active les vérifications de spoof
