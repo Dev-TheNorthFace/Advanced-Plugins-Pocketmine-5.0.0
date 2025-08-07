@@ -1,0 +1,180 @@
+# Configuration des AdvancedKitSystem
+
+starter:
+  # Paramètres de base
+  name: "§e§lStarter"
+  description: "§7Votre premier kit gratuit!"
+  icon: 268
+  permission: "kitsystem.kit.starter"
+  cooldown: 0 # En secondes (0 = pas de cooldown)
+  max-uses: 1 # Nombre maximum d'utilisations (null = illimité)
+  type: "onetime" # onetime/daily/weekly/monthly
+
+  # Contenu du kit
+  items:
+    - id: 268 # Épée en bois
+      meta: 0
+      amount: 1
+      name: "§6Épée du Débutant"
+      lore:
+        - "§7Bienvenue sur le serveur!"
+        - "§aPuissance: §eI"
+      enchantments:
+        - id: 16 # Sharpness
+          level: 1
+    - id: 297 # Pain
+      meta: 0
+      amount: 5
+    - id: 298 # Casque en cuir
+      meta: 0
+      amount: 1
+      color: "#FFAA00" # Couleur RGB
+
+  # Effets spéciaux
+  effects:
+    - id: "speed"
+      duration: 300 # 15 secondes
+      amplifier: 0
+      particles: true
+
+pvp:
+  name: "§c§lPvP"
+  description: "§7Kit pour les combats!"
+  icon: 267
+  permission: "kitsystem.kit.pvp"
+  cooldown: 3600 # 1 heure
+  type: "daily"
+
+  items:
+    - id: 267 # Épée en fer
+      meta: 0
+      amount: 1
+      name: "§4Épée de Guerre"
+      enchantments:
+        - id: 16 # Sharpness
+          level: 2
+        - id: 17 # Knockback
+          level: 1
+    - id: 310 # Casque en diamant
+      meta: 0
+      amount: 1
+    - id: 322 # Pomme dorée
+      meta: 0
+      amount: 3
+
+  effects:
+    - id: "strength"
+      duration: 600 # 30 secondes
+      amplifier: 1 # Niveau 2
+    - id: "regeneration"
+      duration: 100
+      amplifier: 0
+
+vip:
+  name: "§6§lVIP"
+  description: "§7Kit réservé aux §6VIPs"
+  icon: 276
+  permission: "kitsystem.vip"
+  cooldown: 86400 # 24 heures
+  type: "weekly"
+  price: 1000 # Prix dans la boutique
+  currency: "money" # Type de monnaie
+
+  items:
+    - id: 276 # Épée en diamant
+      meta: 0
+      amount: 1
+      name: "§bÉpée §3Légendaire"
+      lore:
+        - "§dUniquement pour les VIPs!"
+        - "§ePuissance: §cIII"
+      enchantments:
+        - id: 16 # Sharpness
+          level: 3
+        - id: 19 # Fire Aspect
+          level: 1
+    - id: 322 # Pomme dorée
+      meta: 0
+      amount: 5
+    - id: 466 # Ender Pearl
+      meta: 0
+      amount: 3
+
+  effects:
+    - id: "speed"
+      duration: 1200 # 1 minute
+      amplifier: 2 # Niveau 3
+    - id: "jump_boost"
+      duration: 1200
+      amplifier: 1
+    - id: "fire_resistance"
+      duration: 6000 # 5 minutes
+      amplifier: 0
+
+miner:
+  name: "§2§lMineur"
+  description: "§7Parfait pour miner!"
+  icon: 278
+  permission: "kitsystem.kit.miner"
+  cooldown: 1800 # 30 minutes
+  type: "daily"
+
+  items:
+    - id: 278 # Pioche en diamant
+      meta: 0
+      amount: 1
+      name: "§bPioche §3Efficace"
+      enchantments:
+        - id: 32 # Efficiency
+          level: 3
+        - id: 35 # Fortune
+          level: 2
+    - id: 50 # Torche
+      meta: 0
+      amount: 16
+    - id: 54 # Coffre
+      meta: 0
+      amount: 1
+
+  effects:
+    - id: "night_vision"
+      duration: 3600 # 3 minutes
+      amplifier: 0
+    - id: "haste"
+      duration: 3600
+      amplifier: 1
+
+# Kit spécial événementiel
+event_kit:
+  name: "§d§lÉvénement"
+  description: "§5Kit spécial temporaire!"
+  icon: 399 # Nether Star
+  permission: "kitsystem.event"
+  cooldown: 0
+  type: "event"
+  active: false # Désactivé par défaut
+
+  items:
+    - id: 276 # Épée en diamant
+      meta: 0
+      amount: 1
+      name: "§cÉpée §4Événementielle"
+      enchantments:
+        - id: 16 # Sharpness
+          level: 5
+        - id: 20 # Knockback
+          level: 2
+    - id: 310 # Casque en diamant
+      meta: 0
+      amount: 1
+      enchantments:
+        - id: 0 # Protection
+          level: 4
+
+  effects:
+    - id: "strength"
+      duration: 1200 # 1 minute
+      amplifier: 2
+    - id: "speed"
+      duration: 1200
+      amplifier: 2

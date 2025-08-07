@@ -1,0 +1,38 @@
+# Configuration du système de AdvancedLottery
+
+# Paramètres de base
+ticket-price: 500                  # Prix d'un ticket en $
+max-tickets-per-player: 100        # Limite de tickets par joueur
+draw-interval: 1800                # Intervalle entre les tirages (en secondes - 1800 = 30 min)
+broadcast-reminder: 600            # Préannonce avant tirage (en secondes - 600 = 10 min)
+
+# Messages
+messages:
+  buy-success: "§a🎟️ Vous avez acheté un ticket! (Chance: {chance}%)"
+  buy-max-reached: "§cVous avez atteint la limite de tickets ({max})"
+  not-enough-money: "§cVous n'avez pas assez d'argent (Prix: {price}$)"
+  time-remaining: "§aProchain tirage dans {minutes} minutes"
+  current-pot: "§6💰 Pot actuel: {pot}$"
+  draw-reminder: "§6🎰 Le tirage de la loterie a lieu dans 10 minutes! Achetez vos tickets avec /lottery buy!"
+  draw-no-participants: "§eAucun ticket acheté pour ce tirage"
+  draw-winner: |
+    §6🎉 La loterie a été tirée!
+    §6🏅 Gagnant: {winner}
+    §6💰 Gain: {amount}$
+    §6➡️ Prochain tirage dans 30 minutes!
+  winner-message: "§a🎉 Vous avez gagné la loterie! Montant: {amount}$"
+
+# Récompenses supplémentaires (optionnel)
+bonus-rewards:
+  enabled: false
+  items:
+    - "minecraft:diamond:3"
+    - "minecraft:emerald:5"
+  commands:
+    - "effect {player} speed 300 1"
+    - "title {player} title §6Félicitations!"
+
+# Paramètres avancés
+storage:
+  save-interval: 900               # Intervalle de sauvegarde (en secondes)
+  max-winners-history: 50          # Nombre maximum de gagnants dans l'historique

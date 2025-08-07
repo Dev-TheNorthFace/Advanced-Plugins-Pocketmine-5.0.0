@@ -1,0 +1,66 @@
+# Système de logs des AdvancedKitSystem
+
+settings:
+  max-logs-per-player: 50
+  auto-cleanup-days: 30
+  log-format: "[{date}] {player} > {kit} (Cooldown: {cooldown}s)"
+  timezone: "Europe/Paris"
+  save-interval-minutes: 15
+
+storage:
+  format: "json" # json ou yaml
+  compress-old-logs: true
+  backup:
+    enabled: true
+    interval: "weekly" # daily/weekly/monthly
+    max-backups: 4
+
+# Exemple de données de log (générées automatiquement)
+logs:
+  - player: "Steve"
+    kit: "starter"
+    timestamp: 1678900000
+    date: "2023-03-15 14:26:40"
+    cooldown: 0
+    items-received:
+      - "Épée en bois"
+      - "Pain x5"
+    location: "monde: 120,64,-320"
+    server: "lobby1"
+
+  - player: "Alex"
+    kit: "vip"
+    timestamp: 1678901234
+    date: "2023-03-15 14:47:14"
+    cooldown: 86400
+    items-received:
+      - "Épée en diamant"
+      - "Pomme dorée x5"
+    location: "pvp: 45,72,89"
+    server: "pvp-arena"
+
+# Statistiques (mises à jour automatiquement)
+statistics:
+  total-kits-distributed: 2487
+  most-popular-kit: "pvp"
+  usage:
+    starter: 892
+    pvp: 1024
+    vip: 423
+    miner: 148
+  last-update: "2023-03-15 15:00:00"
+
+# Configuration des alertes
+alerts:
+  suspicious-activity:
+    enabled: true
+    threshold: 5 # Kits réclamés en moins de 10 minutes
+    actions:
+      - "log"
+      - "notify staff"
+      - "tempban 1h"
+
+  vip-abuse:
+    enabled: true
+    check-interval: "daily"
+    max-daily-claims: 3

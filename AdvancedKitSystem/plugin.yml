@@ -1,0 +1,68 @@
+name: AdvancedKitSystem
+version: 1.0.0
+main: North\Kit\Main
+api: 5.0.0
+description: "Système de kits premium avec GUI, cooldowns dynamiques et boutique"
+author: North
+commands:
+  kit:
+    description: "Ouvre le menu des kits ou donne un kit spécifique"
+    usage: |
+      /kit - Ouvre le menu GUI
+      /kit <nom> - Reçoit un kit directement
+    aliases: ["kits", "kitmenu"]
+  kitlist:
+    description: "Affiche la liste des kits disponibles"
+    usage: "/kitlist"
+  kitlog:
+    description: "Consulte l'historique des kits"
+    usage: "/kitlog [joueur]"
+    permission: "kitsystem.command.log"
+  kitcooldown:
+    description: "Voir les temps de recharge"
+    usage: "/kitcooldown [kit]"
+    aliases: ["kitcd"]
+  kitshop:
+    description: "Boutique de kits premium"
+    usage: "/kitshop"
+    permission: "kitsystem.shop.access"
+
+permissions:
+  kitsystem.*:
+    description: "Accès à tous les kits"
+    default: op
+  kitsystem.kit.*:
+    description: "Accès à tous les kits standards"
+    default: false
+  kitsystem.kit.starter:
+    description: "Kit de départ"
+    default: true
+  kitsystem.kit.pvp:
+    description: "Kit PvP basique"
+    default: false
+  kitsystem.vip:
+    description: "Accès aux kits VIP"
+    default: false
+  kitsystem.premium:
+    description: "Accès aux kits premium"
+    default: false
+  kitsystem.command.log:
+    description: "Voir les logs des kits"
+    default: op
+  kitsystem.shop.access:
+    description: "Accès à la boutique"
+    default: true
+  kitsystem.bypass.cooldown:
+    description: "Ignorer les cooldowns"
+    default: op
+  kitsystem.admin:
+    description: "Permissions admin complètes"
+    default: op
+
+depend:
+  - InvMenu
+  - EconomyAPI
+
+softdepend:
+  - FormAPI
+  - PurePerms

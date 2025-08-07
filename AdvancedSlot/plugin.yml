@@ -1,0 +1,17 @@
+name: AdvancedSlot
+version: 1.0.0
+main: North\Slot\Main
+api: 5.0.0
+author: North
+description: Une machine à sous avec des gains et des animations
+commands:
+  slot:
+    description: Jouer à la machine à sous
+    usage: "/slot <mise>"
+    aliases: ["slots", "machineasous"]
+permissions:
+  slot.command.use:
+    description: Permet d'utiliser la commande /slot
+    default: true
+depend:
+  - EconomyAPI

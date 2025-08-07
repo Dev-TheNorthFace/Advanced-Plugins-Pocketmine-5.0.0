@@ -1,0 +1,29 @@
+name: AdvancedRoulette
+version: 1.0.0
+main: North\Roulette\Main
+api: 5.0.0
+author: North
+description: Un jeu de roulette casino avec multiples paris et statistiques
+commands:
+  roulette:
+    description: Jouer à la roulette casino
+    usage: "/roulette <mise> <pari>"
+    aliases: [rl]
+  roulettestats:
+    description: Voir ses statistiques de roulette
+    usage: "/roulettestats"
+    aliases: [rlstats]
+  roulettetop:
+    description: Voir le classement des meilleurs joueurs
+    usage: "/roulettetop"
+    aliases: [rltop]
+permissions:
+  roulette.play:
+    description: Permission pour jouer à la roulette
+    default: true
+  roulette.bypasscooldown:
+    description: Permet de bypass le cooldown
+    default: op
+  roulette.admin:
+    description: Accès aux commandes admin
+    default: op

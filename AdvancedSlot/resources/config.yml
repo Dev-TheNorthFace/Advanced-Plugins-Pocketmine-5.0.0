@@ -1,0 +1,84 @@
+# Configuration de la AdvancedSlot
+
+# Paramètres de base
+settings:
+  min_bet: 100
+  max_bet: 5000
+  cooldown: 10 # en secondes
+  announce_big_win: true
+  big_win_multiplier: 20
+  spin_delay: 1 # délai entre chaque roulement en secondes
+
+# Symboles et leurs probabilités (plus le poids est élevé, plus c'est fréquent)
+symbols:
+  - symbol: "🍒"
+    name: "cerise"
+    weight: 40
+  - symbol: "🍋"
+    name: "citron"
+    weight: 30
+  - symbol: "💎"
+    name: "diamant"
+    weight: 15
+  - symbol: "🧨"
+    name: "TNT"
+    weight: 10
+  - symbol: "💰"
+    name: "jackpot"
+    weight: 4
+  - symbol: "🧱"
+    name: "brique"
+    weight: 1
+
+# Table des gains
+rewards:
+  jackpot: ["💰💰💰"]
+  jackpot_multiplier: 50
+
+  diamond: ["💎💎💎"]
+  diamond_multiplier: 20
+
+  lemon: ["🍋🍋🍋"]
+  lemon_multiplier: 5
+
+  cherry: ["🍒🍒🍒"]
+  cherry_multiplier: 2
+
+  mixed:
+    patterns: ["💰💎💰", "💎💰💎", "💰🧨💰", "🧨💰🧨"]
+    multiplier: 3
+
+  two_same:
+    enabled: true
+    multiplier: 1.5
+
+# Messages
+messages:
+  spin_header: "§l§6🎰 SLOT MACHINE 🎰"
+  win_message: "§a💥 Tu as gagné {AMOUNT}$ !"
+  lose_message: "§c❌ Tu as perdu ta mise de {AMOUNT}$"
+  big_win_broadcast: "§6§l{PLAYER} a gagné x{MULTIPLIER} ({AMOUNT}$) à la machine à sous !"
+  cooldown_message: "§cAttendez {TIME} secondes avant de rejouer."
+  not_enough_money: "§cVous n'avez pas assez d'argent."
+  invalid_bet: "§cLa mise doit être entre {MIN} et {MAX}"
+
+# Paramètres avancés (stats, classement)
+stats:
+  track_stats: true
+  max_stats_entries: 1000
+  top_players_count: 10
+
+# Niveaux de machines (bronze/argent/or)
+machine_tiers:
+  bronze:
+    min_bet: 100
+    max_bet: 999
+    jackpot_multiplier: 30
+  silver:
+    min_bet: 1000
+    max_bet: 9999
+    jackpot_multiplier: 50
+  gold:
+    min_bet: 10000
+    max_bet: 50000
+    jackpot_multiplier: 100

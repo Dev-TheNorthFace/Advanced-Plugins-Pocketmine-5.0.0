@@ -1,0 +1,48 @@
+# Configuration de la AdvancedRoulette
+
+# Paramètres de base
+settings:
+  min_bet: 100
+  max_bet: 10000
+  cooldown: 10 # en secondes
+  use_economy: "EconomyAPI" # Plugin d'économie à utiliser
+
+# Paramètres des gains
+payouts:
+  color: 2 # Rouge/Noir
+  number: 36 # Numéro exact
+  even_odd: 2 # Pair/Impair
+  high_low: 2 # 1-18/19-36
+  dozen: 3 # Douzaine
+  column: 3 # Colonne
+
+# Paramètres des annonces
+announcements:
+  enabled: true
+  big_win_threshold: 10000
+  broadcast_range: 50 # Portée de l'annonce (en blocs), 0 = tout le serveur
+  message_format: "§6 {player} §7a gagné §e{amount}$ §7au §c/roulette §7en misant sur §a{bet}§7! GG !"
+
+# Nombres gagnants
+winning_numbers:
+  red: [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
+  black: [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]
+  green: [0]
+
+# Messages
+messages:
+  invalid_bet: "§cPari invalide! Utilisez: rouge/noir, pair/impair, 1-18/19-36, 1-12/13-24/25-36 ou un nombre 0-36"
+  not_enough_money: "§cVous n'avez pas assez d'argent!"
+  cooldown: "§cAttendez {time} secondes avant de rejouer!"
+  win: "§aVous avez gagné {amount}$ !"
+  lose: "§cVous avez perdu {amount}$."
+  result: "§6La bille s'arrête sur le §e{number}§6 !"
+  stats_header: "§6=== §fVos Stats Roulette §6==="
+  top_header: "§6=== §fTop Joueurs Roulette §6==="
+
+# Paramètres des statistiques
+statistics:
+  track_wins: true
+  track_losses: true
+  track_amounts: true
+  max_history: 50 # Nombre maximum de parties à conserver

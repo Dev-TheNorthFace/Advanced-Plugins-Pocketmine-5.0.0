@@ -1,0 +1,78 @@
+# Données joueurs - Système de AdvancedKitSystem
+
+settings:
+  data-version: 3
+  auto-save-interval: 900 # 15 minutes en secondes
+  purge-inactive-days: 90 # Suppression des joueurs inactifs
+
+player_data:
+  # Exemple : Joueur régulier
+  Steve:
+    first_join: "2023-03-10 14:22:10"
+    last_kit_claim: "2023-03-15 16:45:30"
+    total_kits_claimed: 27
+    kits:
+      starter:
+        claims: 1
+        last_claimed: "2023-03-10 14:22:15"
+        cooldown_ends: 0
+      pvp:
+        claims: 12
+        last_claimed: "2023-03-15 16:45:30"
+        cooldown_ends: 1678988730 # Timestamp UNIX
+      miner:
+        claims: 5
+        last_claimed: "2023-03-14 11:20:45"
+        cooldown_ends: 0
+    purchased_kits:
+      - name: "vip"
+        purchase_date: "2023-03-12 18:30:00"
+        expires: "2023-04-12 18:30:00" # Abonnement 1 mois
+
+  # Exemple : VIP
+  Alex:
+    first_join: "2023-02-28 09:15:33"
+    last_kit_claim: "2023-03-15 17:22:18"
+    total_kits_claimed: 42
+    rank: "vip"
+    kits:
+      starter:
+        claims: 1
+        last_claimed: "2023-02-28 09:15:40"
+      pvp:
+        claims: 23
+        last_claimed: "2023-03-15 17:22:18"
+        cooldown_ends: 1678990938
+      vip:
+        claims: 8
+        last_claimed: "2023-03-15 12:10:05"
+        cooldown_ends: 1678975805
+    purchased_kits:
+      - name: "vip_pro"
+        purchase_date: "2023-03-01 10:00:00"
+        expires: "never"
+
+# Statistiques globales
+statistics:
+  total_players: 142
+  active_players_7d: 87
+  kits_distributed_today: 56
+  last_updated: "2023-03-15 17:30:45"
+
+# Rotation quotidienne - Suivi
+daily_rotation:
+  current_kit: "pvp"
+  next_rotation: "2023-03-16 00:00:00"
+  claimed_today:
+    - player: "Steve"
+      time: "16:45:30"
+    - player: "Alex"
+      time: "17:22:18"
+
+# Configuration des cooldowns groupés
+group_cooldowns:
+  pvp_ranked:
+    players:
+      - "Steve"
+      - "Alex"
+    cooldown_ends: 1678994538

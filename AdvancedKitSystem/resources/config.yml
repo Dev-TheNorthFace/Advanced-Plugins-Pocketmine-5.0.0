@@ -1,0 +1,114 @@
+# Configuration principale du système de AdvancedKitSystem
+settings:
+  # Paramètres globaux
+  auto-update: true
+  default-language: fr_FR
+  log-expiry-days: 30
+  enable-anti-abuse: true
+  inventory-check: true
+
+  # Paramètres de la boutique
+  shop:
+    enabled: true
+    currency: "money" # money, tokens, gems
+    display-type: "chest" # chest ou form
+
+  # Paramètres des rotations
+  rotation:
+    daily-kit:
+      enabled: true
+      announce: true
+      announce-message: "§aNouveau kit du jour: §e{kit} §a- §b/kitshop"
+    weekly-kit:
+      enabled: false
+
+  # Paramètres des effets
+  effects:
+    particles: true
+    sound-on-claim: true
+    sound-type: "random.orb"
+
+# Configuration des messages
+messages:
+  cooldown: "§cVous devez attendre §e{time} §cavant de réutiliser ce kit"
+  no-permission: "§4Vous n'avez pas la permission pour ce kit"
+  inventory-full: "§6Votre inventaire est plein !"
+  kit-received: "§aVous avez reçu le kit §e{kit}"
+  starter-given: "§bKit starter attribué !"
+  daily-limit: "§cVous avez atteint la limite quotidienne"
+  shop-title: "§l§6Boutique de Kits"
+
+# Configuration des logs
+logging:
+  enabled: true
+  format: "[{date}] {player} a reçu {kit}"
+  save-to-file: true
+  file-format: "KitLogs_{date}.log"
+
+# Configuration des kits par défaut
+default-kits:
+  starter:
+    name: "Starter"
+    icon: 268 # Épée en bois
+    cooldown: 0
+    max-uses: 1
+    permission: "kitsystem.kit.starter"
+    items:
+      - id: 268 # Épée en bois
+        meta: 0
+        amount: 1
+        name: "§6Épée du Débutant"
+        lore: ["§7Votre première épée !"]
+        enchantments:
+          - id: 16 # Sharpness
+            level: 1
+      - id: 297 # Pain
+        meta: 0
+        amount: 5
+    effects:
+      - id: "speed"
+        duration: 300 # 15 secondes
+        amplifier: 0
+        visible: true
+
+  pvp:
+    name: "PvP"
+    icon: 267 # Épée en fer
+    cooldown: 3600 # 1 heure
+    permission: "kitsystem.kit.pvp"
+    items:
+      - id: 267 # Épée en fer
+        meta: 0
+        amount: 1
+      - id: 310 # Casque en diamant
+        meta: 0
+        amount: 1
+    effects:
+      - id: "strength"
+        duration: 600 # 30 secondes
+        amplifier: 0
+        visible: true
+
+# Configuration de la boutique (exemples)
+shop-kits:
+  vip:
+    name: "§bKit VIP"
+    price: 1000
+    currency: "money"
+    cooldown: 86400 # 24h
+    items:
+      - id: 276 # Épée diamant
+        meta: 0
+        amount: 1
+        enchantments:
+          - id: 16 # Sharpness
+            level: 3
+    permanent: false
+    requires: "kitsystem.vip"
+
+# Rotation quotidienne (exemple)
+daily-rotation:
+  - kit: "pvp"
+    day: "monday"
+  - kit: "miner"
+    day: "tuesday"

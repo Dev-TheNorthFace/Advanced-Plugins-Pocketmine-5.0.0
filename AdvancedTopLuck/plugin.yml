@@ -1,0 +1,23 @@
+name: AdvancedTopLuck
+version: 1.0.0
+main: North\TopLuck\Main
+api: 5.0.0
+author: North
+commands:
+  topluck:
+    description: "View top lucky players"
+    usage: "/topluck"
+  luckstats:
+    description: "Check player stats"
+    usage: "/luckstats [player]"
+  luckreset:
+    description: "Reset player stats"
+    usage: "/luckreset <player>"
+    permission: topluck.reset
+  luckflaglist:
+    description: "List suspected players"
+    usage: "/luckflaglist"
+permissions:
+  topluck.reset:
+    description: "Allows resetting player stats"
+    default: op

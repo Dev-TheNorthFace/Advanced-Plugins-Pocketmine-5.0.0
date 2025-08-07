@@ -1,0 +1,17 @@
+name: AdvancedScratch
+version: 1.0.0
+main: North\Scratch\Main
+api: 5.0.0
+description: Un système de tickets à gratter avec récompenses aléatoires
+author: VotreNom
+commands:
+  scratch:
+    description: Commandes principales du système de tickets à gratter
+    usage: |
+      /scratch use - Utiliser un ticket
+      /scratch buy [type] - Acheter un ticket
+      /scratch stats - Voir ses statistiques
+permissions:
+  scratchticket.admin:
+    description: Permissions admin pour le plugin
+    default: op

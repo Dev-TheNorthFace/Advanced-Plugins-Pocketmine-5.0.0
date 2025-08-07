@@ -1,0 +1,17 @@
+name: AdvancedLoan
+version: 1.0.0
+main: North\Loan\Main
+api: 5.0.0
+author: North
+description: "Un système complet de prêts et dettes entre joueurs"
+commands:
+  loan:
+    description: "Gère les prêts entre joueurs"
+    usage: "/loan give|list|pay|accept|default"
+    aliases: ["debt"]
+permissions:
+  loansystem.command:
+    description: "Permission pour utiliser les commandes de prêt"
+    default: true
+depend:
+  - EconomyAPI

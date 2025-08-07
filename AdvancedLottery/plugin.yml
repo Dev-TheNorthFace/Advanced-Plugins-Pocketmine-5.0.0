@@ -1,0 +1,15 @@
+name: AdvancedLottery
+version: 1.0.0
+main: North\Lottery\Main
+api: 5.0.0
+description: Un système de loterie premium pour les serveurs PocketMine
+author: North
+commands:
+  lottery:
+    description: "Système de loterie premium"
+    usage: "/lottery <buy|time|pot|top|history>"
+    aliases: ["lotto"]
+permissions:
+  lottery.command:
+    description: "Permission pour utiliser la commande lottery"
+    default: true

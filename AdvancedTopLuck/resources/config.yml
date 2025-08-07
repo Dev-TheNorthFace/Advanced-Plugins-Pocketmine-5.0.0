@@ -1,0 +1,32 @@
+# Tracked blocks and their rarity multipliers
+tracked_blocks:
+  diamond_ore:
+    rarity: 10
+    display: "Diamond"
+  emerald_ore:
+    rarity: 15
+    display: "Emerald"
+  gold_ore:
+    rarity: 7
+    display: "Gold"
+  redstone_ore:
+    rarity: 5
+    display: "Redstone"
+  lapis_ore:
+    rarity: 5
+    display: "Lapis"
+  ancient_debris:
+    rarity: 20
+    display: "Netherite"
+
+# Detection thresholds
+thresholds:
+  warn: 60
+  freeze: 75
+  ban: 90
+  fake_ore_chance: 30 # % chance to spawn fake ore per player
+
+# Messages
+messages:
+  fake_ore_detected: "§c[TopLuck] %player mined a FAKE ORE! X-Ray detected!"
+  high_score_warning: "§6Your mining luck seems too high (%score%). Stop possible cheats!"
