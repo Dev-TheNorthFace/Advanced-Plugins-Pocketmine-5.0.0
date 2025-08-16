@@ -1,0 +1,47 @@
+name: AdvancedNickname
+version: 1.0.0
+main: North\Nickname\Main
+api: 5.0.0
+author: North
+description: Système complet de gestion de nicknames avec anti-abus et outils staff
+
+commands:
+  nickname:
+    description: Change votre pseudo visible
+    usage: "/nickname <pseudo>"
+    aliases: ["nick"]
+  unnick:
+    description: Remet votre vrai pseudo
+    usage: "/unnick"
+  nickinfo:
+    description: Voir le vrai pseudo d'un joueur (Staff)
+    usage: "/nickinfo <joueur>"
+    permission: nicksystem.admin
+  randomnick:
+    description: Génère un pseudo aléatoire
+    usage: "/randomnick"
+    aliases: ["rannick"]
+  forceunnick:
+    description: Réinitialise le nickname d'un joueur (Staff)
+    usage: "/forceunnick <joueur>"
+    permission: nicksystem.admin
+
+permissions:
+  nicksystem.use:
+    description: Permet d'utiliser les commandes de base
+    default: true
+  nicksystem.color:
+    description: Permet d'utiliser les couleurs dans les nicknames
+    default: op
+  nicksystem.admin:
+    description: Donne accès aux commandes staff
+    default: op
+  nicksystem.bypass.cooldown:
+    description: Contourne le cooldown des changements
+    default: op
+  nicksystem.bypass.limit:
+    description: Contourne la limite de changements
+    default: op
+  nicksystem.bypass.checks:
+    description: Contourne les vérifications de mots interdits
+    default: op

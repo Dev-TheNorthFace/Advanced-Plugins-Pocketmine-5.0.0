@@ -1,0 +1,15 @@
+name: AdvancedTFIL
+version: 1.0.0
+main: North\TFIL\Main
+api: 5.0.0
+author: North
+description: "Mode de jeu 'The Floor Is Lava' avec sol destructible pour PocketMine 5.0.0"
+commands:
+  arenedestruction:
+    description: "Gère le mode The Floor Is Lava"
+    usage: "/arenedestruction <start|stop|status>"
+    aliases: [tfil, floorlava]
+permissions:
+  tfil.admin:
+    description: "Permission pour gérer le jeu"
+    default: op

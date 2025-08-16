@@ -1,0 +1,79 @@
+# Configuration du plugin Bomberman
+
+# Paramètres de l'arène
+arena:
+  world: "bomberman"  # Nom du monde de l'arène
+  spawn_points:       # Positions de spawn des joueurs (x,y,z)
+    - [10, 5, 10]
+    - [-10, 5, 10]
+    - [10, 5, -10]
+    - [-10, 5, -10]
+  center: [0, 5, 0]   # Centre de l'arène (pour la zone qui rétrécit)
+  border_shrink:
+    enabled: true     # Activer la zone qui rétrécit
+    start_size: 50    # Taille initiale (diamètre)
+    end_size: 10      # Taille finale
+    shrink_time: 180  # Temps en secondes pour atteindre la taille finale
+
+# Paramètres des bombes
+bombs:
+  fuse_time: 3        # Temps avant explosion (en secondes)
+  base_range: 2       # Portée de base des explosions
+  max_range: 5        # Portée maximale possible
+  max_count: 3        # Nombre maximum de bombes posables simultanément
+  destroyable_blocks: # Liste des blocs destructibles
+    - "wool"
+    - "planks"
+    - "glass"
+    - "stained_glass"
+
+# Paramètres des bonus
+powerups:
+  spawn_chance: 15    # Chance qu'un bloc détruit fasse apparaître un bonus (en %)
+  types:
+    - type: "range"   # +1 portée d'explosion
+      duration: 0     # 0 = permanent
+      chance: 30
+    - type: "count"   # +1 bombe posable
+      duration: 0
+      chance: 25
+    - type: "speed"   # Vitesse augmentée
+      duration: 60
+      chance: 20
+    - type: "shield"  # Bouclier temporaire
+      duration: 30
+      chance: 15
+    - type: "instant" # Explosion immédiate
+      duration: 0
+      chance: 10
+
+# Paramètres de jeu
+game:
+  max_players: 8      # Nombre maximum de joueurs
+  min_players: 2      # Nombre minimum pour démarrer
+  countdown: 10       # Compte à rebours avant départ (secondes)
+  duration: 300       # Durée maximale d'une partie (secondes)
+  auto_restart: 30    # Temps avant redémarrage automatique (secondes)
+
+# Récompenses
+rewards:
+  win: 100            # Points pour le vainqueur
+  kill: 50            # Points par élimination
+  survival: 10        # Points par seconde de survie
+  currency: "coins"   # Nom de la monnaie virtuelle
+
+# Messages
+messages:
+  join: "§aVous avez rejoint la partie de Bomberman!"
+  leave: "§cVous avez quitté la partie."
+  start: "§6La partie commence!"
+  win: "§e§l{player} a gagné la partie!"
+  countdown: "§eDébut dans {time} secondes..."
+  border_shrink: "§cLa zone rétrécit!"
+  powerup_get: "§bBonus obtenu: {powerup}"
+
+# Paramètres des effets visuels
+effects:
+  explosion_particles: "flame"  # Type de particules pour les explosions
+  powerup_glow: true           # Les bonus brillent
+  bomb_beep: true              # La bombe émet un bip avant d'exploser

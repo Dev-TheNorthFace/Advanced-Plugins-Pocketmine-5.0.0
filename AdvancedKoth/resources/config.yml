@@ -1,0 +1,18 @@
+# Configuration du KOTH
+rewards:
+  base: 100 # Récompense de base
+  bonus: 50 # Bonus par tranche de 30 secondes
+
+team-mode: false # Mode équipe activé ou non
+
+# Centre de la bordure (coordonnées par défaut)
+border-center-x: 0
+border-center-y: 100
+border-center-z: 0
+
+# Taille initiale de la bordure
+border-radius: 50
+
+# Paramètres de la zone
+zone-radius: 5
+koth-duration: 600 # Durée en secondes (10 minutes)

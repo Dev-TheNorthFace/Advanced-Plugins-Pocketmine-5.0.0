@@ -1,0 +1,49 @@
+# Configuration des arènes
+arenas:
+  sumo1:
+    world: "sumo"
+    pos1:
+      x: 100
+      y: 65
+      z: 100
+    pos2:
+      x: 110
+      y: 70
+      z: 110
+    spawn:
+      x: 105
+      y: 66
+      z: 105
+    shrink_time: 60 # en secondes
+    min_size: 3 # taille minimale de la plateforme
+
+# Paramètres du jeu
+game_settings:
+  knockback_multiplier: 1.5
+  combo_time: 2 # secondes entre les hits pour compter comme combo
+  max_combo: 5
+  random_effects_chance: 10 # pourcentage
+
+# Récompenses
+rewards:
+  win:
+    - "minecraft:gold_ingot:3"
+    - "money:100"
+  combo_bonus:
+    - "minecraft:diamond:1:per combo after 3 hits"
+
+# Messages
+messages:
+  join: "§aVous avez rejoint l'arène §e{arena}!"
+  leave: "§cVous avez quitté l'arène!"
+  win: "§6§lVictoire! §r§7Vous avez gagné le combat Sumo!"
+  lose: "§cVous avez été éliminé!"
+  combo: "§eCombo x{combo}! §6+{bonus}"
+  effect: "§dEffet aléatoire: §f{effect}"
+  shrink: "§cLa plateforme rétrécit!"
+
+# Système ELO
+elo:
+  default: 1000
+  win_gain: 10
+  lose_loss: 5

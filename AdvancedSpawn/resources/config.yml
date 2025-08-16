@@ -1,0 +1,74 @@
+# Configuration du système de spawn avancé
+
+# Paramètres globaux
+cooldown: 60 # Cooldown en secondes entre chaque /spawn
+default_world: "world" # Monde par défaut si aucun spawn spécifique n'est défini
+
+# Paramètres de téléportation
+teleport_delay: 5 # Délai en secondes avant téléportation
+cancel_on_movement: true # Annuler si le joueur bouge
+cancel_on_damage: true # Annuler si le joueur prend/porte des dégâts
+block_in_combat: true # Empêcher la téléportation en combat
+combat_tag_duration: 15 # Durée en secondes du tag de combat
+
+# Protection après téléportation
+protection:
+  enabled: true
+  duration: 3 # Durée en secondes
+  effects:
+    - "RESISTANCE:255:3" # Effet de résistance (niveau 255 pendant 3s)
+  disable_pvp: true
+  disable_fall_damage: true
+
+# Effets visuels et sonores
+effects:
+  teleport_particles: "ENDERMAN_TELEPORT" # Particules pendant le délai
+  arrival_particles: "ENDERMAN_TELEPORT" # Particules à l'arrivée
+  arrival_sound: "mob.endermen.portal" # Son à l'arrivée
+  sound_volume: 1.0
+  sound_pitch: 1.0
+
+# Messages personnalisés
+messages:
+  teleport_start: "§aTéléportation dans §e{time}§a secondes... Ne bougez pas !"
+  teleport_cancelled_movement: "§cTéléportation annulée car vous avez bougé !"
+  teleport_cancelled_damage: "§cTéléportation annulée car vous avez subi des dégâts !"
+  teleport_cancelled_combat: "§cVous ne pouvez pas vous téléporter en combat !"
+  teleport_success: "§aTéléportation au spawn réussie !"
+  cooldown_active: "§cVous devez attendre §e{time}§c secondes avant de réutiliser cette commande."
+  spawn_set: "§aSpawn défini avec succès pour le monde §e{world}§a (type: §e{type}§a)"
+  spawn_info: |-
+    §6Informations du spawn:
+    §eMonde: §f{world}
+    §eCoordonnées: §fX: {x} Y: {y} Z: {z}
+
+# Spawns par défaut (seront écrasés par /setspawn)
+spawns:
+  world:
+    default:
+      x: 128.5
+      y: 65.0
+      z: 128.5
+      world: "world"
+  factions:
+    default:
+      x: 0.5
+      y: 70.0
+      z: 0.5
+      world: "factions"
+
+# Paramètres avancés
+advanced:
+  check_nearby_entities: true # Vérifier les entités proches
+  nearby_radius: 5 # Rayon en blocs pour vérifier les entités hostiles
+  disable_in_water: true # Empêcher la téléportation dans l'eau
+  disable_in_lava: true # Empêcher la téléportation dans la lave
+  require_solid_ground: true # Nécessite un sol solide sous les pieds
+  world_specific_cooldowns: # Cooldowns spécifiques par monde
+    world: 30
+    nether: 90
+    end: 120
+  permission_cooldowns: # Cooldowns spécifiques par permission
+    vip: 30
+    premium: 15
+    staff: 0

@@ -1,0 +1,15 @@
+name: AdvancedCTF
+version: 1.0.0
+main: North\CTF\Main
+api: 5.0.0
+description: Un plugin de Capture de Drapeau (CTF) pour Minecraft PM5
+author: North
+commands:
+  ctf:
+    description: Commandes principales du CTF
+    usage: "/ctf <join|start|stop|setbase>"
+    aliases: [capturetheflag]
+permissions:
+  ctf.admin:
+    description: Permissions d'administration du CTF
+    default: op

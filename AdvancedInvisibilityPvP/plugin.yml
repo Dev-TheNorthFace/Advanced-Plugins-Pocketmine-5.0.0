@@ -1,0 +1,15 @@
+name: AdvancedInvisibilityPvP
+version: 1.0.0
+main: North\InvisibilityPvP\Main
+api: 5.0.0
+author: North
+description: Un plugin PvP avec mécanique d'invisibilité
+commands:
+  pvpinvisible:
+    description: Commandes principales du PvP Invisible
+    usage: "/pvpinvisible <start|create> [args]"
+    aliases: ["invispvp"]
+permissions:
+  pvpinvisible.admin:
+    description: Permission pour gérer les arènes
+    default: op

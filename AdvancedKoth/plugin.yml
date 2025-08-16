@@ -1,0 +1,15 @@
+name: AdvancedKoth
+version: 1.0.0
+main: North\Koth\Main
+api: 5.0.0
+description: Un plugin King of the Hill avec des fonctionnalités avancées
+author: North
+commands:
+  koth:
+    description: Commandes pour gérer le KOTH
+    usage: "/koth start|stop|move|status"
+    permission: koth.command
+permissions:
+  koth.command:
+    description: Permission pour utiliser les commandes KOTH
+    default: op

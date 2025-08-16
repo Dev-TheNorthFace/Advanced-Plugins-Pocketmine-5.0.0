@@ -1,0 +1,36 @@
+# Configuration des arènes PvP Invisible
+arenas:
+  default:
+    world: "pvp_world"         # Nom du monde de l'arène
+    spawn: {x: 0, y: 64, z: 0} # Position de spawn
+    safe_zone: {x1: -50, z1: -50, x2: 50, z2: 50} # Zone de jeu
+
+# Paramètres du jeu
+game_settings:
+  invisibility_duration: 999999 # Durée effet invisibilité (ticks)
+  reveal_duration: 100          # Durée révélation après hit (ticks)
+  base_damage: 4                # Dégâts de base des armes
+  max_players: 10               # Joueurs max par arène
+  starting_items:               # Items donnés au démarrage
+    - "wooden_sword:1"
+    - "snowball:3"
+
+# Paramètres des effets
+effects:
+  movement_particles: true      # Activer les particules de mouvement
+  particle_color: "100,100,100,50" # Couleur particules (R,G,B,A)
+  hit_sound: "random.orb"       # Son quand un joueur est touché
+
+# Système de zone qui rétrécit
+shrinking_zone:
+  enabled: true                 # Activer le rétrécissement
+  initial_size: 50              # Taille initiale (blocs)
+  final_size: 10                # Taille minimale
+  shrink_interval: 600          # Intervalle rétrécissement (ticks)
+  damage_per_block: 1           # Dégâts en dehors zone
+
+# Récompenses
+rewards:
+  kill_points: 5                # Points par élimination
+  win_points: 20                # Points pour victoire
+  survival_bonus: 2             # Points par minute survivée

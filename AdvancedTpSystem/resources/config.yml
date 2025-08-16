@@ -1,0 +1,49 @@
+# Paramètres de base
+request_expire_time: 30 # Délai avant expiration d'une demande (en secondes)
+teleport_cost: 100 # Coût de base pour chaque téléportation
+cost_per_block: 1 # Coût supplémentaire par bloc de distance
+
+# Paramètres de combat/PvP
+combat_block_time: 15 # Délai après un combat où les TP sont bloqués (secondes)
+block_tp_in_pvp: true # Bloquer les TP dans les zones PvP
+
+# Anti-abus
+request_cooldown: 10 # Délai entre deux demandes (secondes)
+spam_protection: true # Activer la protection anti-spam
+max_requests_per_minute: 5 # Nombre max de demandes par minute
+
+# Paramètres économiques
+economy_enabled: true # Activer/désactiver le système économique
+distance_cost_enabled: true # Activer le coût par distance
+refund_on_deny: false # Rembourser si la demande est refusée
+
+# Historique
+history_enabled: true # Activer l'historique des téléportations
+max_history_entries: 10 # Nombre max d'entrées dans l'historique
+
+# Notifications
+sound_on_request: true # Jouer un son à la réception d'une demande
+sound_type: "note.pling" # Type de son (voir PocketMine docs)
+particles_on_tp: true # Afficher des particules lors des TP
+particle_type: "portal" # Type de particules
+
+# Messages personnalisés
+messages:
+  request_sent: "§aDemande de TP envoyée à §e{player}§a. Expire dans §e{time}§a secondes"
+  request_received: "§b💌 Demande de TP reçue de §e{player}§b. Tapez §a/tpaccept §bou §c/tpdeny"
+  request_expired: "§cVotre demande de TP à §e{player} §ca expiré"
+  teleport_success: "§aTéléportation réussie vers §e{player}§a! Coût: §e${cost}"
+  teleport_denied: "§cVous avez refusé la demande de §e{player}"
+  in_combat: "§cTéléportation annulée - vous êtes en combat!"
+  pvp_zone: "§cTéléportation impossible en zone PvP"
+  cooldown: "§cVeuillez attendre §e{time} §csecondes avant d'envoyer une nouvelle demande"
+  tpa_disabled: "§e{player} §ca désactivé les demandes de TP"
+  not_enough_money: "§cFonds insuffisants pour cette téléportation (coût: §e${cost}§c)"
+  tpa_toggle_on: "§aDemandes de TP activées"
+  tpa_toggle_off: "§cDemandes de TP désactivées"
+
+# Zones protégées (world-guard style)
+protected_zones:
+  - "pvp"
+  - "arena"
+  - "event"

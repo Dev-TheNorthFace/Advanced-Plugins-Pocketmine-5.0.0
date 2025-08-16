@@ -1,0 +1,22 @@
+name: AdvancedFactionWarLite
+version: 1.0.0
+main: North\FactionWarLite\Main
+api: 5.0.0
+description: Un mini-jeu de faction avec destruction de cœur
+author: North
+commands:
+  fwjoin:
+    description: Rejoindre une équipe
+    usage: "/fwjoin [red|blue]"
+  fwstart:
+    description: Démarrer la partie
+    usage: "/fwstart"
+    permission: fw.admin
+  fwstop:
+    description: Arrêter la partie
+    usage: "/fwstop"
+    permission: fw.admin
+permissions:
+  fw.admin:
+    description: Permission d'admin pour FactionWar
+    default: op

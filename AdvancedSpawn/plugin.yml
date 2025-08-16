@@ -1,0 +1,43 @@
+name: AdvancedSpawn
+version: 1.0.0
+main: North\Spawn\Main
+api: 5.0.0
+description: "Un système de spawn ultra-avancé avec délai, effets et protection"
+author: North
+
+commands:
+  spawn:
+    description: "Se téléporter au spawn avec un délai"
+    usage: "/spawn"
+    aliases: ["hub", "lobby"]
+  setspawn:
+    description: "Définir la position du spawn"
+    usage: "/setspawn [nom]"
+    permission: "spawn.set"
+  spawninfo:
+    description: "Afficher les informations du spawn actuel"
+    usage: "/spawninfo"
+    aliases: ["sinfo"]
+
+permissions:
+  spawn.use:
+    description: "Permet d'utiliser la commande /spawn"
+    default: true
+  spawn.instant:
+    description: "Permet une téléportation instantanée sans délai"
+    default: op
+  spawn.set:
+    description: "Permet de définir le spawn"
+    default: op
+  spawn.bypass.cooldown:
+    description: "Permet de contourner le cooldown"
+    default: op
+  spawn.bypass.combat:
+    description: "Permet de se téléporter même en combat"
+    default: op
+  spawn.bypass.movement:
+    description: "Permet de bouger pendant la téléportation"
+    default: op
+  spawn.multi:
+    description: "Permet d'utiliser les spawns multiples"
+    default: op

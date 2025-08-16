@@ -1,0 +1,57 @@
+# Configuration de Potion Madness
+
+# Intervalle entre les effets (en secondes)
+interval: 20
+
+# Durée minimale et maximale des effets (en secondes)
+duration_min: 5
+duration_max: 15
+
+# Liste des effets positifs
+positive_effects:
+  strength:
+    name: "Force II"
+    amplifier: 1
+  speed:
+    name: "Vitesse II"
+    amplifier: 1
+  jump_boost:
+    name: "Saut amélioré"
+    amplifier: 1
+  regeneration:
+    name: "Régénération"
+    amplifier: 0
+  resistance:
+    name: "Résistance"
+    amplifier: 0
+  invisibility:
+    name: "Invisibilité"
+    amplifier: 0
+
+# Liste des effets négatifs
+negative_effects:
+  slowness:
+    name: "Lenteur II"
+    amplifier: 1
+  mining_fatigue:
+    name: "Fatigue minière"
+    amplifier: 0
+  blindness:
+    name: "Cécité"
+    amplifier: 0
+  nausea:
+    name: "Nausée"
+    amplifier: 0
+  poison:
+    name: "Poison"
+    amplifier: 0
+  weakness:
+    name: "Faiblesse"
+    amplifier: 0
+
+# Options supplémentaires
+options:
+  shared_effect: true       # Tous les joueurs reçoivent le même effet
+  inverted_effect: false    # Affiche un effet différent de celui appliqué
+  combo_effect: false       # Applique deux effets (un bon et un mauvais)
+  message_prefix: "§l§6[PotionMadness]§r"

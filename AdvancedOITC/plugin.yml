@@ -1,0 +1,18 @@
+name: AdvancedOITC
+version: 1.0.0
+main: North\OITC\Main
+api: 5.0.0
+description: Un mode de jeu nerveux où chaque flèche compte !
+author: North
+commands:
+  oitc:
+    description: Commandes principales du jeu
+    usage: "/oitc [start|stop|stats]"
+    aliases: [oneinthechamber]
+permissions:
+  oitc.admin:
+    description: Permission pour gérer le jeu
+    default: op
+  oitc.play:
+    description: Permission pour jouer
+    default: true

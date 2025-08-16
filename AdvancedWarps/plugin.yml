@@ -1,0 +1,53 @@
+name: AdvancedWarps
+version: 1.0.0
+main: North\Warps\Main
+api: 5.0.0
+description: Système de warps avancé avec GUI, économie et permissions
+author: North
+
+commands:
+  warp:
+    description: Se téléporter à un warp
+    usage: "/warp <nom>"
+    permission: warpsystem.use
+  setwarp:
+    description: Créer un warp
+    usage: "/setwarp <nom> [public|private] [prix] [permission]"
+    permission: warpsystem.create
+  delwarp:
+    description: Supprimer un warp
+    usage: "/delwarp <nom>"
+    permission: warpsystem.delete
+  warps:
+    description: Lister les warps disponibles
+    usage: "/warps"
+    permission: warpsystem.list
+
+permissions:
+  warpsystem.use:
+    description: Permet d'utiliser les warps
+    default: true
+  warpsystem.create:
+    description: Permet de créer des warps
+    default: op
+  warpsystem.delete:
+    description: Permet de supprimer des warps
+    default: op
+  warpsystem.delete.others:
+    description: Permet de supprimer les warps des autres
+    default: op
+  warpsystem.list:
+    description: Permet de voir la liste des warps
+    default: true
+  warpsystem.access.private:
+    description: Permet d'accéder aux warps privés
+    default: op
+  warpsystem.menu:
+    description: Permet d'utiliser le menu des warps
+    default: true
+  warpsystem.bypass.cooldown:
+    description: Permet de contourner le cooldown
+    default: op
+  warpsystem.bypass.price:
+    description: Permet de contourner les prix
+    default: op

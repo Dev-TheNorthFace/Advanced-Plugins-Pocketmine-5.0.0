@@ -1,0 +1,15 @@
+# Positions des bases
+red_base:
+  x: 100
+  y: 64
+  z: 200
+  world: world
+blue_base:
+  x: -100
+  y: 64
+  z: -200
+  world: world
+
+# Paramètres du jeu
+game_duration: 1200 # Durée en secondes (20min)
+min_players: 4 # Nombre minimum de joueurs pour démarrer

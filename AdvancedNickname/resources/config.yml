@@ -1,0 +1,76 @@
+# Configuration du AdvancedNickname
+
+# Mots interdits dans les nicknames (insensible à la casse)
+banned-words:
+  - "admin"
+  - "moderator"
+  - "staff"
+  - "owner"
+  - "fuck"
+  - "shit"
+  - "nazi"
+  - "racist"
+  - "grosmot"
+
+# Paramètres de longueur
+max-length: 16  # Longueur maximale des nicknames
+min-length: 3    # Longueur minimale des nicknames
+
+# Limitations
+change-cooldown: 3600  # Cooldown entre changements (en secondes, 3600 = 1h)
+max-changes-per-day: 5  # Nombre maximum de changements par jour
+max-changes-per-hour: 2 # Nombre maximum de changements par heure
+
+# Paramètres des couleurs
+allow-colors: true
+allowed-colors:
+  - "§a" # Vert
+  - "§b" # Aqua
+  - "§c" # Rouge
+  - "§d" # Rose
+  - "§e" # Jaune
+  - "§f" # Blanc
+  - "§1" # Bleu foncé
+  - "§2" # Vert foncé
+  - "§3" # Bleu-vert
+  - "§4" # Rouge foncé
+  - "§5" # Violet
+  - "§6" # Or
+  - "§7" # Gris
+  - "§8" # Gris foncé
+  - "§9" # Bleu
+
+# Paramètres de formatage
+allow-formats: true
+allowed-formats:
+  - "§l" # Gras
+  - "§o" # Italique
+  - "§n" # Souligné
+  - "§k" # Aléatoire
+
+# Paramètres staff
+staff-see-realnames: true  # Les staff voient les vrais noms
+staff-bypass-checks: true  # Les staff contournent les vérifications
+
+# Paramètres d'intégration
+update-tablist: true      # Mise à jour de la tablist
+update-scoreboard: true   # Mise à jour du scoreboard
+update-chat: true         # Mise à jour du chat
+
+# Paramètres de logs
+log-changes: true         # Enregistrer les changements
+log-file: "nick_logs.txt" # Fichier de logs
+
+# Whitelist/Blacklist
+use-whitelist: false      # Si true, n'autorise que les nicks de la whitelist
+use-blacklist: true       # Si true, bloque les nicks de la blacklist
+
+# Exemples:
+whitelist:
+  - "AwesomePlayer"
+  - "MysticWarrior"
+
+blacklist:
+  - "Notch"
+  - "Herobrine"
+  - "Dream"

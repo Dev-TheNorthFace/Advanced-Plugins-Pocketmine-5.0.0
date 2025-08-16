@@ -1,0 +1,32 @@
+# Configuration du système de AdvancedWarps
+
+# Délai avant téléportation (en secondes)
+teleport-delay: 5
+
+# Cooldown entre les warps (en secondes)
+cooldown: 30
+
+# Message lorsque la téléportation commence
+teleport-start-message: "§eTéléportation dans {DELAY} secondes. Ne bougez pas!"
+
+# Message lorsque la téléportation réussit
+teleport-success-message: "§aTéléportation réussie vers '{WARP}'!"
+
+# Message lorsque la téléportation est annulée
+teleport-cancel-message: "§cTéléportation annulée car vous avez bougé ou pris des dégâts!"
+
+# Activer le menu GUI avec la boussole
+enable-gui-menu: true
+
+# Item pour ouvrir le menu GUI (COMPASS, PAPER, etc.)
+menu-item: "COMPASS"
+
+# Enregistrer les logs d'utilisation des warps
+enable-usage-logs: true
+
+# Options économiques
+economy:
+  # Message lorsque le joueur n'a pas assez d'argent
+  not-enough-money: "§cVous n'avez pas assez d'argent (nécessaire: {PRICE})!"
+  # Message lorsque l'argent est déduit
+  money-deducted: "§a{PRICE} ont été déduits de votre compte!"

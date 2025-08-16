@@ -1,0 +1,55 @@
+# 🏆 Configuration du système de tournoi
+
+# Paramètres généraux
+tournament:
+  default_type: "1v1"  # Types disponibles: 1v1, 2v2, 3v3
+  countdown_time: 60    # Temps d'attente avant démarrage (secondes)
+  max_players: 16       # Limite globale de participants
+  match_timeout: 300    # Temps max par match (secondes)
+
+# Récompenses
+rewards:
+  victory:
+    money: 500
+    elo_points: 100
+  finalist:
+    money: 250
+    elo_points: 50
+  participation:
+    money: 50
+    elo_points: 10
+
+# Arènes
+arenas:
+  - "arena1"
+  - "arena2"
+  - "arena3"
+
+# Kits
+kits:
+  default:
+    - "id:276,count:1"   # Épée en diamant
+    - "id:310,count:1"   # Casque en diamant
+    - "id:311,count:1"   # Plastron en diamant
+    - "id:312,count:1"   # Jambières en diamant
+    - "id:313,count:1"   # Bottes en diamant
+  tournament:
+    - "id:267,count:1"   # Épée en fer
+    - "id:306,count:1"   # Casque en fer
+    - "id:307,count:1"   # Plastron en fer
+    - "id:308,count:1"   # Jambières en fer
+    - "id:309,count:1"   # Bottes en fer
+
+# Messages
+messages:
+  join: "§a[🏆] %player a rejoint le tournoi! (%current/%max)"
+  start: "§e[⚔️] Le tournoi %type commence!"
+  victory: "§6[🎉] %team remporte le match!"
+  reward: "§aVous avez reçu %money$ et %elo points Elo!"
+
+# Paramètres avancés
+advanced:
+  best_of_three: false
+  allow_spectators: true
+  anti_cheat: true
+  cooldown: 300         # Cooldown entre tournois (secondes)

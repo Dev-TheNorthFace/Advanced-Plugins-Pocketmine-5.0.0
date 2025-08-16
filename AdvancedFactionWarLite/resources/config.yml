@@ -1,0 +1,74 @@
+# Configuration de AdvancedFactionWarLite
+
+# Paramètres de la partie
+game:
+  duration: 1200 # Durée de la partie en secondes (20min par défaut)
+  min_players: 2 # Nombre minimum de joueurs pour démarrer
+  auto_start: true # Démarrer automatiquement quand assez de joueurs
+
+# Paramètres des équipes
+teams:
+  red:
+    spawn: [15, 70, 15] # Position de spawn de l'équipe rouge
+    core: [10, 70, 10] # Position du coeur rouge
+    color: "§c" # Code couleur (rouge)
+    kit: # Kit de départ
+      - "iron_sword:1"
+      - "iron_pickaxe:1"
+      - "iron_axe:1"
+      - "iron_shovel:1"
+      - "iron_helmet:1"
+      - "iron_chestplate:1"
+      - "iron_leggings:1"
+      - "iron_boots:1"
+      - "steak:8"
+
+  blue:
+    spawn: [85, 70, 85] # Position de spawn de l'équipe bleue
+    core: [90, 70, 90] # Position du coeur bleu
+    color: "§9" # Code couleur (bleu)
+    kit: # Kit de départ (identique à rouge par défaut)
+      - "iron_sword:1"
+      - "iron_pickaxe:1"
+      - "iron_axe:1"
+      - "iron_shovel:1"
+      - "iron_helmet:1"
+      - "iron_chestplate:1"
+      - "iron_leggings:1"
+      - "iron_boots:1"
+      - "steak:8"
+
+# Paramètres des ressources
+resources:
+  spawn_interval: 300 # Intervalle de spawn des ressources en secondes (5min)
+  center_position: [50, 70, 50] # Position du centre pour le drop de ressources
+  items: # Items à faire spawn
+    - "tnt:3"
+    - "diamond:2"
+    - "iron_ingot:8"
+    - "golden_apple:1"
+
+# Paramètres de la map
+map:
+  world_name: "factionwar" # Nom du monde
+  border_size: 100 # Taille de la bordure (100x100)
+  protected_blocks: # Blocs indestructibles
+    - "bedrock"
+    - "beacon"
+    - "obsidian"
+
+# Paramètres des modes de jeu
+game_modes:
+  ultra_rush:
+    duration: 300 # 5 minutes
+    start_items: ["tnt:5", "iron_sword:1"]
+
+  survival:
+    resource_multiplier: 0.5 # Moins de ressources
+    kit: ["stone_sword:1", "bread:3"]
+
+  multi_cores:
+    cores_per_team: 2
+    second_core_positions:
+      red: [30, 70, 30]
+      blue: [70, 70, 70]

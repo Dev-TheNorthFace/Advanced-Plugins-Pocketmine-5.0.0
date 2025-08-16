@@ -1,0 +1,63 @@
+# Configuration de l'arène
+arena:
+  world: "pvp_arena"  # Nom du monde de l'arène
+  center: [0, 65, 0]  # Point central pour les calculs de zone
+  radius: 30          # Rayon de la zone de jeu circulaire
+  floor-y: 64         # Niveau Y initial du sol
+
+# Mécanique de jeu
+game:
+  duration: 600       # Durée totale en secondes (10min)
+  damage-per-second: 2 # Dégâts par seconde dans la lave
+  block-disappear-delay: 3 # Délai avant disparition (secondes)
+
+# Types de destruction activés
+destruction-types:
+  falling-blocks: true  # Blocs qui tombent quand on marche dessus
+  random-explosions: false # Explosions aléatoires
+  rising-lava: false   # Lave qui monte progressivement
+  zone-collapse: true   # Zones 3x3 qui s'effondrent
+
+# Réglages spécifiques
+falling-blocks:
+  materials: [SAND, GRAVEL, WHITE_WOOL] # Blocs affectés
+  chance: 80                            # % de chance de disparition
+
+explosions:
+  interval: 15         # Toutes les X secondes
+  power: 3.0           # Puissance des explosions
+  fire: false          # Mettre le feu après explosion
+
+lava:
+  start-y: 50          # Niveau Y initial de la lave
+  rise-interval: 30    # Toutes les X secondes
+  rise-amount: 1       # Blocs de montée par intervalle
+
+zones:
+  warning-time: 5      # Avertissement avant effondrement (sec)
+  size: 3              # Taille des zones (3x3)
+  particles: true      # Effets visuels d'avertissement
+
+# Effets aléatoires
+random-effects:
+  enabled: true
+  interval: 30         # Toutes les X secondes
+  effects:
+    - SPEED:2:10       # ID/Niveau/Durée(sec)
+    - JUMP_BOOST:1:15
+    - SLOWNESS:1:8
+    - BLINDNESS:1:5
+
+# Récompenses
+rewards:
+  kill: 5              # Points par élimination
+  survival-per-minute: 3 # Points par minute survivée
+  final-survivor: 20   # Bonus dernier survivant
+
+# Messages
+messages:
+  start-game: "§6>> §cTHE FLOOR IS LAVA §6<< §eDébut dans 10 secondes!"
+  warning: "§cATTENTION! §eLe sol va s'effondrer dans %s secondes!"
+  lava-rise: "§4La lave monte! §6(+%s blocs)"
+  player-eliminated: "§c%s est tombé dans la lave!"
+  winner: "§a%s a gagné la partie!"

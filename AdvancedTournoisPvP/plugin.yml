@@ -1,0 +1,15 @@
+name: AdvancedTournoisPvP
+version: 1.0.0
+main: North\TournoisPvP\Main
+api: 5.0.0
+author: North
+description: Système de tournois PVP avec gestion d'arènes et récompenses
+commands:
+  tournament:
+    description: Commandes pour gérer les tournois
+    usage: "/tournament <join|leave|start|stop|setarena>"
+    aliases: ["tournoi"]
+permissions:
+  tournamentsystem.admin:
+    description: Permet de gérer les tournois
+    default: op

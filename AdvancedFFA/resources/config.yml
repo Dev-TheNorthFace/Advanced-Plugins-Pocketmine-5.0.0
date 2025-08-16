@@ -1,0 +1,77 @@
+# Configuration de l'arène FFA
+arena:
+  world: "ffa_world"
+  x: 100.5
+  y: 70.0
+  z: 100.5
+  border_size: 50  # Taille de la bordure de l'arène
+
+# Zone d'attente avant le match
+lobby:
+  world: "lobby"
+  x: 50.5
+  y: 70.0
+  z: 50.5
+
+# Zone des spectateurs
+spectator:
+  world: "lobby"
+  x: 200.5
+  y: 70.0
+  z: 200.5
+
+# Paramètres du jeu
+game_settings:
+  countdown_time: 60  # Temps d'attente avant départ (secondes)
+  min_players: 2      # Nombre minimum de joueurs pour démarrer
+  max_players: 24     # Nombre maximum de joueurs
+  afk_timeout: 120    # Temps avant élimination pour AFK (secondes)
+  shrink_time: 300    # Temps avant réduction de zone (secondes)
+  shrink_speed: 1     # Vitesse de réduction (blocs/seconde)
+
+# Récompenses
+rewards:
+  money: 500          # Montant d'argent (EconomyAPI)
+  legendary_key: true  # Donner une clé légendaire
+  items:              # Items supplémentaires
+    - "264:0:1"       # ID:META:QUANTITY (Diamant)
+    - "322:0:5"       # Pommes d'or
+
+# Kits disponibles
+kits:
+  default:
+    items:
+      - "276:0:1"     # Épée en diamant
+      - "306:0:1"     # Casque en diamant
+      - "307:0:1"     # Plastron en diamant
+      - "308:0:1"     # Jambières en diamant
+      - "309:0:1"     # Bottes en diamant
+      - "322:0:5"     # Pommes d'or
+  archer:
+    items:
+      - "261:0:1"     # Arc
+      - "262:0:32"    # Flèches
+      - "298:0:1"     # Casque en cuir
+      - "299:0:1"     # Plastron en cuir
+      - "300:0:1"     # Jambières en cuir
+      - "301:0:1"     # Bottes en cuir
+
+# Messages
+messages:
+  join: "§aVous avez rejoint l'événement FFA !"
+  start_countdown: "§6Début du FFA dans §e{TIME} §6seconde(s) !"
+  game_start: "§c3... 2... 1... §aGO !"
+  elimination: "§c[💀] {PLAYER} a été éliminé - §e{REMAINING} §cjoueurs restants"
+  victory: "§6[🏆] {PLAYER} est le dernier survivant et gagne {REWARD} !"
+  rewards: "500$ et une clé légendaire"
+  no_permission: "§cVous n'avez pas la permission de faire cela"
+  already_started: "§cL'événement FFA a déjà commencé !"
+  not_enough_players: "§cPas assez de joueurs pour démarrer l'événement"
+  afk_kick: "§cVous avez été éliminé pour inactivité"
+
+# Paramètres avancés
+advanced:
+  random_arena: false  # Activer la sélection aléatoire d'arène
+  kit_selection: false # Permettre aux joueurs de choisir leur kit
+  cooldown: 300        # Cooldown entre les participations (secondes)
+  stats_tracking: true # Activer le suivi des statistiques

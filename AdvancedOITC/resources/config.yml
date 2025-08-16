@@ -1,0 +1,66 @@
+# Configuration de base
+game:
+  # Durée de la partie en secondes (300 = 5 minutes)
+  duration: 300
+  # Score requis pour gagner
+  win_score: 20
+  # Délai de réapparition en ticks (20 ticks = 1 seconde)
+  respawn_delay: 20
+
+# Récompenses de killstreak
+killstreaks:
+  3:
+    effect: SPEED
+    duration: 30  # secondes
+    amplifier: 0
+  5:
+    extra_arrows: 1
+  10:
+    effect: STRENGTH
+    duration: 15
+    amplifier: 1
+
+# Armes
+weapons:
+  bow:
+    damage: 1000  # One-shot
+    arrow_recovery: true
+  sword:
+    damage: 6
+    type: STONE
+
+# Système de récompenses
+rewards:
+  kill:
+    bow: 2
+    sword: 1
+  death: -1
+
+# Maps
+arenas:
+  default:
+    world: "oitc_arena"
+    spawns:
+      - [125, 64, 125, 0, 0]
+      - [75, 64, 75, 0, 0]
+  small:
+    world: "oitc_cage"
+    spawns:
+      - [10, 5, 10, 0, 0]
+      - [20, 5, 20, 180, 0]
+
+# Classements
+leaderboard:
+  top_players: 10
+  reset_weekly: true
+  rewards:
+    - "tag [Top Archer]"
+    - "particle effect:flame"
+
+# Messages
+messages:
+  game_start: "§aLa partie commence ! Vous avez 1 flèche, faites-en bon usage !"
+  kill: "§e+%points% points pour %player% (%total%)"
+  death: "§c-1 point pour %player%"
+  killstreak: "§6Série de %count% kills ! %reward%"
+  win: "§6§l%player% a gagné avec %points% points !"

@@ -1,0 +1,14 @@
+name: AdvancedPotionMadness
+version: 1.0.0
+main: North\PotionMadness\Main
+api: 5.0.0
+author: North
+commands:
+  potionmadness:
+    description: "Active/Désactive le Potion Madness"
+    usage: "/potionmadness <start|stop>"
+    aliases: ["pmadness"]
+permissions:
+  potionmadness.command:
+    description: "Permission pour utiliser la commande PotionMadness"
+    default: op

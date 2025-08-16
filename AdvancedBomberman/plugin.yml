@@ -1,0 +1,15 @@
+name: AdvancedBomberman
+version: 1.0.0
+main: North\Bomberman\Main
+api: 5.0.0
+description: Un plugin Bomberman pour Minecraft Bedrock avec PocketMine
+author: North
+commands:
+  bomberman:
+    description: Commandes principales du jeu Bomberman
+    usage: "/bomberman <join|leave>"
+    aliases: [bm]
+permissions:
+  bomberman.play:
+    description: Permission pour jouer à Bomberman
+    default: true

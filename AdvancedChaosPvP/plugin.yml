@@ -1,0 +1,15 @@
+name: AdvancedChaosPvP
+version: 1.0.0
+main: North\ChaosPvP\Main
+api: 5.0.0
+author: North
+description: Un mode PvP chaotique où les kits changent aléatoirement !
+commands:
+  chaoskit:
+    description: Contrôle le mode Chaos PvP
+    usage: "/chaoskit <start|stop|interval> [seconds]"
+    aliases: [ckit]
+permissions:
+  chaospvp.admin:
+    description: Permission pour gérer le mode Chaos
+    default: op

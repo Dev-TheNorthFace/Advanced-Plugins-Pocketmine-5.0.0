@@ -1,0 +1,14 @@
+name: AdvancedFFA
+version: 1.0.0
+main: North\FFA\Main
+api: 5.0.0
+description: Système FFA - Dernier survivant
+author: North
+commands:
+  ffa:
+    description: Rejoindre l'événement FFA
+    usage: "/ffa join"
+permissions:
+  ffa.command:
+    description: Permission pour utiliser la commande FFA
+    default: true

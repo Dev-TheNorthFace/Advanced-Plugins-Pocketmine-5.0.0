@@ -1,0 +1,22 @@
+name: AdvancedSumoPvP
+version: 1.0.0
+main: North\SumoPvP\Main
+api: 5.0.0
+description: Un plugin fun pour des combats Sumo PvP avec mécaniques avancées
+author: North
+commands:
+  sumo:
+    description: Commandes principales du Sumo PvP
+    usage: "/sumo join [arena]"
+    permission: sumopvp.use
+  sumoadmin:
+    description: Commandes admin du Sumo PvP
+    usage: "/sumoadmin create|setspawn|delete"
+    permission: sumopvp.admin
+permissions:
+  sumopvp.use:
+    description: Permet d'utiliser les commandes joueur
+    default: true
+  sumopvp.admin:
+    description: Permet d'utiliser les commandes admin
+    default: op

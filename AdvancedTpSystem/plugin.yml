@@ -1,0 +1,92 @@
+name: TPSystem
+version: 1.0.0
+main: North\TPSystem\Main
+api: 5.0.0
+description: Système avancé de téléportation entre joueurs avec économie et anti-abus
+author: North
+
+commands:
+  tpa:
+    description: Envoyer une demande de téléportation à un joueur
+    usage: /tpa <joueur>
+    aliases: ["call"]
+
+  tpahere:
+    description: Demander à un joueur de venir à vous
+    usage: /tpahere <joueur>
+    aliases: ["callhere"]
+
+  tpaccept:
+    description: Accepter une demande de téléportation
+    usage: /tpaccept
+    aliases: ["tpayes"]
+
+  tpdeny:
+    description: Refuser une demande de téléportation
+    usage: /tpdeny
+    aliases: ["tpno"]
+
+  tpcancel:
+    description: Annuler une demande de téléportation envoyée
+    usage: /tpcancel
+    aliases: ["tpremove"]
+
+  tptoggle:
+    description: Activer/désactiver les demandes de téléportation
+    usage: /tptoggle
+    aliases: ["tponoff"]
+
+  tprecent:
+    description: Voir l'historique des téléportations récentes
+    usage: /tprecent
+    aliases: ["tphistory"]
+
+  tpsettings:
+    description: Ouvrir le menu des paramètres de téléportation
+    usage: /tpsettings
+    aliases: ["tpmenu"]
+
+permissions:
+  tpasystem.tpa:
+    description: Permet d'utiliser la commande /tpa
+    default: true
+
+  tpasystem.tpahere:
+    description: Permet d'utiliser la commande /tpahere
+    default: true
+
+  tpasystem.tpaccept:
+    description: Permet d'utiliser la commande /tpaccept
+    default: true
+
+  tpasystem.tpdeny:
+    description: Permet d'utiliser la commande /tpdeny
+    default: true
+
+  tpasystem.tpcancel:
+    description: Permet d'utiliser la commande /tpcancel
+    default: true
+
+  tpasystem.tptoggle:
+    description: Permet d'utiliser la commande /tptoggle
+    default: true
+
+  tpasystem.tprecent:
+    description: Permet d'utiliser la commande /tprecent
+    default: true
+
+  tpasystem.tpsettings:
+    description: Permet d'utiliser la commande /tpsettings
+    default: true
+
+  tpasystem.bypass.combat:
+    description: Permet de bypasser la restriction en combat
+    default: op
+
+  tpasystem.bypass.cost:
+    description: Permet de bypasser le coût économique
+    default: op
+
+  tpasystem.admin:
+    description: Donne tous les accès au système TPA
+    default: op

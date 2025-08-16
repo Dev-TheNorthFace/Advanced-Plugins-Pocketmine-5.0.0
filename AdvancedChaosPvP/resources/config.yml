@@ -1,0 +1,81 @@
+# AdvancedChaosPvP - Configuration des kits et paramètres
+
+# Intervalle entre les changements de kits (en secondes)
+interval: 60
+
+# Tous les joueurs reçoivent-ils le même kit ?
+same_kit_for_all: false
+
+# Intervalle aléatoire entre les changements (désactive 'interval' si true)
+random_interval:
+  enabled: true
+  min: 30  # Minimum 30 secondes
+  max: 90  # Maximum 90 secondes
+
+# Effets aléatoires supplémentaires
+random_effects:
+  enabled: true
+  chance: 30  # 30% de chance d'avoir un effet bonus/malus
+  effects:
+    - "jump_boost:2"
+    - "poison:1"
+    - "strength:1"
+    - "weakness:1"
+    - "haste:2"
+    - "mining_fatigue:1"
+
+# Liste des kits disponibles
+kits:
+  Overkill:
+    helmet: "netherite_helmet"
+    chestplate: "netherite_chestplate"
+    leggings: "netherite_leggings"
+    boots: "netherite_boots"
+    sword:
+      type: "netherite_sword"
+      enchantments:
+        sharpness: 5
+    items:
+      golden_apple: 3
+    effects:
+      resistance: 1
+
+  Archer:
+    helmet: "leather_helmet"
+    chestplate: "leather_chestplate"
+    leggings: "leather_leggings"
+    boots: "leather_boots"
+    bow:
+      type: "bow"
+      enchantments:
+        power: 3
+        punch: 1
+    items:
+      arrow: 32
+    effects:
+      speed: 1
+
+  Tank:
+    helmet: "diamond_helmet"
+    chestplate: "diamond_chestplate"
+    leggings: "diamond_leggings"
+    boots: "diamond_boots"
+    sword: "diamond_sword"
+    effects:
+      slowness: 2
+      resistance: 2
+
+  Pyromane:
+    items:
+      flint_and_steel: 1
+      tnt: 5
+      fire_charge: 3
+    effects:
+      fire_resistance: 1
+
+# Messages du plugin
+messages:
+  kit_change: "§e⚡ Nouveau kit: §6{kit} §e! §c{time}s avant le prochain!"
+  same_kit: "§aTous les joueurs ont reçu le même kit aléatoire!"
+  different_kits: "§aChaque joueur a reçu un kit différent!"
+  random_effect: "§dEffet bonus: §5{effect} {amplifier}§d pendant 2 minutes!"
